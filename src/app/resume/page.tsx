@@ -1,24 +1,23 @@
-import {Island} from "@/components/Island";
-import {Pill} from "@/components/Pill";
-import {PillStyle} from "@/components/Pill/Pill";
-import {ResumeItem} from "@/components/ResumeItem";
+import { PageLayout, ResumeItem, Island } from "@/components";
 
 function Page() {
   return (
-    <section className="container mx-auto">
-      <h1 className="text-3xl font-bold mb-4 bg-blue-900 p-4">
-        Resume
-      </h1>
-
-      <div className="grid grid-cols-2 gap-6">
+    <PageLayout title="Resume">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
 
         <div data-testid="primary">
-          <Island title="Work Experience">
+          <Island title="Experience">
             <ResumeItem
               title="Lovevery - Senior Software Engineer"
               timeline="January 2020 - Present"
-              listItems={
-              ['Promoted to Senior Engineer in 2025 in recognition of technical leadership and cross-functional impact', 'Experience building high visibility customer-facing features (subscription management tools, cart and checkout) and internal tools (admin portal interfaces for the CX team)', 'Experience working closely with product managers, designers, and business stakeholders to scope and deliver intuitive, resilient user experiences', 'Led front-end development for an in-house web video player to support digital course products', 'Led front end development on project to rebuild customer subscription management page, migrating complex legacy functionality to a new application while preserving key business logic and user flows', 'Regularly led on call rotations, gained experience promptly handling user facing outages, root cause analysis and deploying hotfixes.']}
+              listItems={[
+                'Promoted to Senior Software Engineer Spring 2025',
+                'Experience building high visibility customer-facing features (e.g. subscription management tools, product, cart and checkout pages) and internal tools (e.g. admin portal interfaces for the customer experience team)',
+                'Experience working closely with product managers, designers, and business stakeholders to scope and deliver intuitive, resilient user experiences',
+                'Led front-end development for an in-house web video player to support digital course products',
+                'Led front end development for a new customer subscription management page, migrating complex legacy functionality to a new application while preserving key business logic and user flows',
+                'Regularly led on call rotations, gained experience promptly triaging user facing outages, root cause analysis and deploying hotfixes'
+              ]}
             />
 
             <ResumeItem
@@ -96,7 +95,7 @@ function Page() {
             />
 
             <ResumeItem
-              title="Experienced with"
+              title="Experienced With"
               keyValueItems={[
                 {
                   key: 'Languages',
@@ -133,7 +132,7 @@ function Page() {
           </Island>
         </div>
       </div>
-    </section>
+    </PageLayout>
   );
 }
 

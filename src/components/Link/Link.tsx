@@ -1,21 +1,33 @@
+import Link from 'next/link'
 
 type LinkProps = {
   text: string;
   href: string;
-  isExternal: boolean;
+  isExternal?: boolean;
+  onClick?: () => void;
 }
 
-const Link = ({ text, href, isExternal }: LinkProps) => {
+const AppLink = ({ text, href, isExternal = false, onClick }: LinkProps) => {
+
+  if (isExternal) {
+    return (
+      <a
+        href={href}
+        onClick={onClick}
+        className="cursor-pointer text-blue-500 hover:text-blue-600 underline"
+        target={'_blank'}
+        rel="noopener noreferrer"
+      >
+        {text}
+      </a>
+    );
+  }
+
   return (
-    <a
-      href={href}
-      className="cursor-pointer text-blue-500 hover:text-blue-600 underline"
-      target={isExternal ? '_blank' : undefined}
-      rel="noopener noreferrer"
-    >
+    <Link href={href} className="cursor-pointer text-blue-500 hover:text-blue-600 underline">
       {text}
-    </a>
+    </Link>
   );
 }
 
-export default Link;
+export default AppLink;

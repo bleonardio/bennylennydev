@@ -6,7 +6,7 @@ export enum PillStyle {
 
 type PillProps = {
   text: string;
-  style: PillStyle;
+  style?: PillStyle;
   classes?: string;
 }
 

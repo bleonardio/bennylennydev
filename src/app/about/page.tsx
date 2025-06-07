@@ -1,33 +1,26 @@
 'use client';
 
-import {Card} from "@/components/Card";
-import {Link} from "@/components/Link";
-import {Pill} from "@/components/Pill";
-import {PillStyle} from "@/components/Pill/Pill";
+import { Card, Link, Pill, PageLayout } from "@/components";
 
 function Page() {
   return (
-    <section className="container mx-auto">
-      <h1 className="text-3xl font-bold mb-4 bg-blue-900 p-4">
-        About
-      </h1>
-      <p className="font-bold mb-4">
+    <PageLayout title="About">
+      <p className="mb-4">
         Hello! I’m Bennett and you’re probably wondering whats going on here - me too.
       </p>
       <p className="mb-4">
         Let's start from the beginning: 13.8 billion years ag--
       </p>
       <p className="mb-4">
-        Let's cut to the chase: I grew up in Idaho, followed some calls for adventure abroad, and am currently based in Amsterdam where I have lived for the past couple years but what has felt already like a lifetimes worth of lessons - and expected no less living on a saturn line. ¯\_(ツ)_/¯
+        Let's cut to the chase: I grew up in Idaho and spent most of my life in a classroom, with the band or on a soccer field. I followed some calls for adventure abroad, and am currently based in Amsterdam where I have lived for the past couple years but what has felt already like a lifetimes worth of lessons - and expected no less living on a saturn line. ¯\_(ツ)_/¯
       </p>
       <p className="mb-4">
         I’ve watched friends come and go, interests come and go, identities come and go and as the years go by, I am gaining more confidence in my ability to “handle the seasons of my life” (Landslide, Fleetwood mac).
       </p>
       <p className="mb-4">
-        I am working as a software engineer at  <Link text="Lovevery" href="https://www.lovevery.com" isExternal={true} />  but when I'm not working I can be found gardening, sleeping, sketching, making cocktails or doing nothing which is becoming a favorite pastime of mine.
+        I am working as a software engineer at  <Link text="Lovevery" href="https://www.lovevery.com" isExternal={true} />  but when I'm not working I can be found gardening, sleeping, sketching, gaming, making cocktails or doing nothing (underrated).
       </p>
 
-      {/* red pill blue pill hehe */}
       <p className="mb-4">Currently I am:</p>
 
       <div className="flex gap-2">
@@ -44,17 +37,20 @@ function Page() {
 
       <p className="my-4">Labels I vibe with:</p>
       <div className="flex gap-2 max-w-md flex-wrap">
-        <Pill text="Goofy little guy" style={PillStyle.Blue} />
-        <Pill text="Writer of poems and code" style={PillStyle.Blue} />
-        <Pill text="Trans man" style={PillStyle.Blue} />
-        <Pill text="Expat" style={PillStyle.Blue} />
-        <Pill text="Musician" style={PillStyle.Blue} />
-        <Pill text="Scorpio sun" style={PillStyle.Blue} />
-        <Pill text="Sag rising" style={PillStyle.Blue} />
-        <Pill text="Leo moon" style={PillStyle.Blue} />
-      </div>
 
-    </section>
+        <Pill text="Goofy little guy" />
+        <Pill text="Guitar Hero enthusiast" />
+        <Pill text="Writer of poems and code" />
+        <Pill text="Trans man" />
+        <Pill text="Expat" />
+        <Pill text="Musician" />
+        <Pill text="Beach boy" />
+        <Pill text="Scorpio sun" />
+        <Pill text="Sag rising" />
+        <Pill text="Leo moon" />
+
+      </div>
+    </PageLayout>
   );
 }
 
