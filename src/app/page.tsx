@@ -2,11 +2,15 @@
 
 import classNames from "classnames";
 import {useState} from "react";
+import ConfettiExplosion from 'react-confetti-explosion';
+
 import {PageLayout, FortuneCookie } from "@/components";
 
 export default function Home() {
-  const cookieJar = 9;
+  const cookiesAvailable = 9;
+
   const [overallScore, setOverallScore] = useState<number>(0)
+  const [cookiesCracked, setCookiesCracked] = useState<number>(0)
   const [resetClicked, setResetClicked] = useState<boolean>(false)
   const [hasStarted, setHasStarted] = useState<boolean>(false);
 
@@ -50,31 +54,53 @@ export default function Home() {
   }
 
   const fortuneClassification = getFortuneClassification()
+  const isGameFinished = cookiesCracked === cookiesAvailable;
+
+  function Scoreboard() {
+    return (
+      <div className="bg-amber-200 border-red-700 border-4  rounded-md text-black p-4 mx-auto">
+        <p>Score: {overallScore}</p>
+        <p>{fortuneClassification}</p>
+
+        {(hasStarted && !isGameFinished) && (
+          <div
+            className={classNames(
+              {['cursor-pointer']: !resetClicked },
+              'border-t-2 border-red-700 mt-4 pt-2',
+            )}
+          >
+            <p
+              onClick={() => {
+                if (resetClicked) return;
+                setResetClicked(!resetClicked)
+              }}>
+              {resetClicked ? 'its not that easy to start over' : 'reset?'}
+            </p>
+          </div>
+        )}
+      </div>
+    );
+  }
 
   return (
     <PageLayout>
-      <div className="bg-amber-200 border-red-700 border-4  rounded-md text-black p-4 mx-auto">
-        <p>score: {overallScore}</p>
-        <p>{fortuneClassification}</p>
-
-        {hasStarted && (
-          <p
-            className={classNames({ ['cursor-pointer']: !resetClicked }, 'border-t-2 border-red-700 mt-4 pt-2')}
-            onClick={() => {
-              if (resetClicked) return;
-
-              setResetClicked(!resetClicked)
-            }}>
-            {resetClicked ? 'its not that easy to start over' : 'reset?'}
-          </p>
-        )}
-      </div>
+      {isGameFinished && (
+        <div className="grid grid-cols-3">
+          <ConfettiExplosion className="container mx-auto"/>
+          <ConfettiExplosion className="container mx-auto"/>
+          <ConfettiExplosion className="container mx-auto"/>
+        </div>
+      )}
+      <Scoreboard />
 
       <div className="grid grid-cols-3 gap-6 my-10">
-        {Array.from({ length: cookieJar }).map((_, i) => (
+        {Array.from({ length: cookiesAvailable }).map((_, i) => (
           <FortuneCookie
             key={i}
-            cb={(score) =>  setOverallScore(overallScore + score)}
+            cb={(score) => {
+              setOverallScore(overallScore + score);
+              setCookiesCracked(cookiesCracked + 1);
+            }}
             onClick={onClick}
           />
         ))}
