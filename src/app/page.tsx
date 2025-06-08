@@ -86,9 +86,9 @@ export default function Home() {
     <PageLayout>
       {isGameFinished && (
         <div className="grid grid-cols-3">
-          <ConfettiExplosion className="container mx-auto"/>
-          <ConfettiExplosion className="container mx-auto"/>
-          <ConfettiExplosion className="container mx-auto"/>
+          <ConfettiExplosion particleCount={200} />
+          <ConfettiExplosion particleCount={200} />
+          <ConfettiExplosion particleCount={200} />
         </div>
       )}
       <Scoreboard />

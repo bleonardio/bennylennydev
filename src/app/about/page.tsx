@@ -7,7 +7,7 @@ function Page() {
   return (
     <PageLayout title="About">
 
-      <div className="grid grid-cols-3 gap-6 pt-4 pb-8">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 pt-4 pb-8">
         <Polaroid label="test" src={Placeholder} alt="placeholder" />
         <Polaroid label="test" src={Placeholder} alt="placeholder" />
         <Polaroid label="test" src={Placeholder} alt="placeholder" />
@@ -27,7 +27,7 @@ function Page() {
       </p>
       <p className="mb-4">
         I’ve had friends come and go, interests come and go, identities come and go and as the years go by, I am
-        gaining more confidence in my ability to “handle the seasons of my life” (Landslide, Fleetwood mac).
+        gaining more confidence in my ability to “handle the seasons of my life” (Landslide, Fleetwood Mac).
       </p>
       <p className="mb-4">
         I am working as a software engineer at <Link text="Lovevery" href="https://www.lovevery.com" isExternal={true}/> but when I'm not working I can be found
@@ -36,16 +36,15 @@ function Page() {
 
       <p className="mb-4">Currently I am:</p>
 
-      <div className="flex gap-2">
+      <div className="grid grid-cols-1 md:grid-cols-4 gap-6 pb-8">
         <Card front="Studying" back="Herbalism, Palmistry, Mixology, Astrology"/>
 
         <Card front="Watching" back="White Lotus, Taskmaster, One Piece"/>
 
         <Card front="Playing" back="Disney Dreamlight Valley"/>
 
-        <Card front="Reading" back="Be Here Now, Surviving Saturn Return, American Fascism"/>
+        <Card front="Reading" back="Surviving Saturn Return by Caggie Dunlop, How to Read a Tree by Tristan Gooley" />
 
-        <Card front="Wearing" back="Bombas Slippers || Docs"/>
       </div>
 
       <p className="my-4">Labels I vibe with:</p>
@@ -55,7 +54,7 @@ function Page() {
         <Pill text="Guitar Hero enthusiast"/>
         <Pill text="Writer of poems and code"/>
         <Pill text="Trans masc"/>
-        <Pill text="Expat"/>
+        <Pill text="Queer"/>
         <Pill text="Musician"/>
         <Pill text="Beach boy"/>
         <Pill text="Scorpio sun"/>

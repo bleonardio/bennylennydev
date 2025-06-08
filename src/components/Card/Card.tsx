@@ -8,15 +8,13 @@ type CardProps = {
 }
 
 const Card = ({ front, back }: CardProps) => {
-  const [isFlipped, setIsFlipped] = useState<boolean>(false);
-
   return (
     <div
       data-testid="card"
-      onClick={() => setIsFlipped(!isFlipped)}
-      className="cursor-pointer p-4 w-fit border-blue-900 border-2 rounded-md"
+      className="group cursor-pointer p-4 bg-amber-200 text-black rounded-md w-full text-center min-h-[140px] flex justify-center items-center"
     >
-      <p>{isFlipped ? back : front}</p>
+      <p className="block group-hover:hidden">{front}</p>
+      <p className="hidden group-hover:block">{back}</p>
     </div>
   );
 }

@@ -41,6 +41,8 @@ function Page() {
       <h1 className="text-2xl font-bold mb-4 mt-10">Featured Films</h1>
 
       <h2 className="text-xl font-bold mb-4 my-4">Caroling</h2>
+      <p className="mb-2">A holiday tradition among some friends to gather in person or from afar to sing some carols :)</p>
+
 
       <div className="flex gap-4 pb-6">
         <CinemaScreen>
@@ -62,6 +64,7 @@ function Page() {
       </div>
 
       <h2 className="text-xl font-bold my-4">i48 Film Festival</h2>
+      <p className="mb-2">Highlights from participation in an annual challenge to create a short film from scratch in 48 hours.</p>
 
       <div className="flex gap-4 pb-6">
         <CinemaScreen>
@@ -82,6 +85,7 @@ function Page() {
       </div>
 
       <h2 className="text-xl font-bold my-4">NASA SUITS Highlights</h2>
+      <p className="mb-2">Information and visual aids of the system known as A.R.S.I.S. (Augmented Reality Space Informatics System).</p>
 
       <div className="flex gap-4 pb-6">
         <CinemaScreen>
