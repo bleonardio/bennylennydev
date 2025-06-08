@@ -1,9 +1,9 @@
 
 type CinemaScreenProps = {
-  children: React.ReactNode;
+  src: string;
 }
 
-const CinemaScreen = ({ children }: CinemaScreenProps) => {
+const CinemaScreen = ({ src }: CinemaScreenProps) => {
   return (
     <div className="relative bg-black p-4">
       {/* Top Curtain */}
@@ -16,8 +16,13 @@ const CinemaScreen = ({ children }: CinemaScreenProps) => {
       <div className="absolute top-0 right-0 w-6 h-full bg-red-900 rounded-l-3xl shadow-md z-30" />
 
       {/* Screen */}
-      <div className="relative z-20 aspect-video w-full max-w-3xl mx-auto border-4 border-black">
-        {children}
+      <div className="relative z-20 aspect-video w-full max-w-3xl mx-auto border-4 border-black lg:max-w-[960px]">
+        <iframe
+          src={src} width="100%" height="100%"
+          title="YouTube video player"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerPolicy="strict-origin-when-cross-origin"
+          allowFullScreen></iframe>
       </div>
     </div>
 

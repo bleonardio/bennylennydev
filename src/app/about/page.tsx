@@ -48,19 +48,19 @@ function Page() {
       </div>
 
       <p className="my-4">Labels I vibe with:</p>
-      <div className="flex gap-2 max-w-md flex-wrap">
+      <div className="flex gap-6 flex-wrap">
 
         <Pill text="Goofy little guy"/>
         <Pill text="Guitar Hero enthusiast"/>
         <Pill text="Writer of poems and code"/>
         <Pill text="Trans masc"/>
         <Pill text="Queer"/>
-        <Pill text="Musician"/>
-        <Pill text="Beach boy"/>
         <Pill text="Scorpio sun"/>
         <Pill text="Sag rising"/>
         <Pill text="Leo moon"/>
-
+        <Pill text="Developer"/>
+        <Pill text="Musician"/>
+        <Pill text="Beach boy"/>
       </div>
     </PageLayout>
   );
