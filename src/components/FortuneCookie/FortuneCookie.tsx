@@ -6,9 +6,10 @@ import {FortuneCookieIcon} from "@/components/Icons";
 
 type FortuneCookieProps = {
   cb?: (score: number) => void;
+  onClick?: () => void;
 }
 
-const FortuneCookie = ({ cb }: FortuneCookieProps) => {
+const FortuneCookie = ({ cb, onClick }: FortuneCookieProps) => {
   const [isOpened, setIsOpened] = useState(false);
 
   function randomInt(min: number, max: number): number {
@@ -21,6 +22,8 @@ const FortuneCookie = ({ cb }: FortuneCookieProps) => {
   // todo maybe: open state shouldnt be on / off, any click should generate a new fortune. but on off state is simple and understanable
 
   function handleClick() {
+    onClick?.()
+
     if (fortune && !isOpened) {
       cb?.(fortune.score);
     }

@@ -1,13 +1,14 @@
 'use client';
 
-import {PageLayout} from "@/components";
-import {FortuneCookie} from "@/components/FortuneCookie";
+import classNames from "classnames";
 import {useState} from "react";
+import {PageLayout, FortuneCookie } from "@/components";
 
 export default function Home() {
   const cookieJar = 9;
   const [overallScore, setOverallScore] = useState<number>(0)
-
+  const [resetClicked, setResetClicked] = useState<boolean>(false)
+  const [hasStarted, setHasStarted] = useState<boolean>(false);
 
   function getFortuneClassification() {
     if (overallScore <= -9) {
@@ -29,7 +30,7 @@ export default function Home() {
       return "We get it, you're good at this";
 
     } else if (overallScore >= 9) {
-      return 'Okay slaayyy';
+      return 'Lets gooooo';
 
     } else if (overallScore >= 6) {
       return 'You are on a roll';
@@ -42,6 +43,12 @@ export default function Home() {
     }
   }
 
+  function onClick() {
+    if (!hasStarted) {
+      setHasStarted(true);
+    }
+  }
+
   const fortuneClassification = getFortuneClassification()
 
   return (
@@ -49,9 +56,25 @@ export default function Home() {
       <p>score: {overallScore}</p>
       <p>{fortuneClassification}</p>
 
+      {hasStarted && (
+        <p
+          className={classNames({ ['cursor-pointer']: !resetClicked })}
+          onClick={() => {
+            if (resetClicked) return;
+
+            setResetClicked(!resetClicked)
+          }}>
+          {resetClicked ? 'its not that easy to start over' : 'reset?'}
+        </p>
+      )}
+
       <div className="grid grid-cols-3 gap-6 my-10">
         {Array.from({ length: cookieJar }).map((_, i) => (
-          <FortuneCookie key={i}  cb={(score) =>  setOverallScore(overallScore + score)} />
+          <FortuneCookie
+            key={i}
+            cb={(score) =>  setOverallScore(overallScore + score)}
+            onClick={onClick}
+          />
         ))}
       </div>
     </PageLayout>
