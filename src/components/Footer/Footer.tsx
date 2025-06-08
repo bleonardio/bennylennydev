@@ -1,9 +1,9 @@
 
 const Footer = () => {
   return (
-    // todo add links, content and position absolute
-
-    <footer>Footer!</footer>
+    <footer className="p-4 text-center text-sm text-white">
+      © 2025 bennylenny.dev. All rights reserved.
+    </footer>
   );
 }
 

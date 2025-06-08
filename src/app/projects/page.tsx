@@ -1,19 +1,31 @@
 import {Link, PageLayout} from "@/components";
 import { Poem } from "@/components/Poem";
-import {belatedBoyhood} from "@/components/Poem/data/belated-boyhood";
+import {belatedBoyhood, borrowed, fragments, roots, wandering } from "@/components/Poem/data";
 
 function Page() {
   return (
     <PageLayout title="Projects">
       <h1 className="text-2xl font-bold my-4">Poetry</h1>
-      <Poem poem={belatedBoyhood} />
+
+      <div className="grid grid-cols-2 gap-6">
+        <div className="flex flex-col gap-6">
+          <Poem poem={belatedBoyhood} />
+          <Poem poem={fragments} />
+          <Poem poem={roots} />
+        </div>
+        <div className="flex flex-col gap-6">
+          <Poem poem={borrowed} />
+          <Poem poem={wandering} />
+        </div>
+      </div>
+
+
+
       {/*  todo: new component for image display, like film printed images, */}
-      {/* pill comp: maybe support emoji, different colors */}
-      {/* interactivity, semantic html, test coverage, footer build, responsive header, header closes on page nav, upload photos and poems and get short film links - maybe yt video embeds. */}
+      {/* todo: color scheme & font choice */}
+      {/* todo: transitions, content pass, semantic html check, responsiveness / mobile friendly, upload sketch photos  */}
 
-      <p>sketches</p>
       <h1 className="text-2xl font-bold my-4">Sketches</h1>
-
 
       <h1 className="text-2xl font-bold my-4">Featured Films</h1>
 
