@@ -7,3 +7,6 @@ export { PageLayout } from './PageLayout';
 export { Pill } from './Pill';
 export { ResumeItem } from './ResumeItem';
 export { FortuneCookie } from './FortuneCookie';
+export { Poem } from './Poem';
+export { Polaroid } from './Polaroid';
+export { CinemaScreen } from './CinemaScreen'

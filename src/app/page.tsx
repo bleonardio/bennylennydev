@@ -17,7 +17,7 @@ export default function Home() {
     } else if (overallScore <= -6) {
       return 'Ouch, better luck next time';
 
-    } else if (overallScore <= -3) {
+    } else if (overallScore < 0) {
       return 'Hang in there';
 
     } else if (overallScore === 0) {
@@ -53,20 +53,22 @@ export default function Home() {
 
   return (
     <PageLayout>
-      <p>score: {overallScore}</p>
-      <p>{fortuneClassification}</p>
+      <div className="bg-amber-200 border-red-700 border-4  rounded-md text-black p-4 mx-auto">
+        <p>score: {overallScore}</p>
+        <p>{fortuneClassification}</p>
 
-      {hasStarted && (
-        <p
-          className={classNames({ ['cursor-pointer']: !resetClicked })}
-          onClick={() => {
-            if (resetClicked) return;
+        {hasStarted && (
+          <p
+            className={classNames({ ['cursor-pointer']: !resetClicked }, 'border-t-2 border-red-700 mt-4 pt-2')}
+            onClick={() => {
+              if (resetClicked) return;
 
-            setResetClicked(!resetClicked)
-          }}>
-          {resetClicked ? 'its not that easy to start over' : 'reset?'}
-        </p>
-      )}
+              setResetClicked(!resetClicked)
+            }}>
+            {resetClicked ? 'its not that easy to start over' : 'reset?'}
+          </p>
+        )}
+      </div>
 
       <div className="grid grid-cols-3 gap-6 my-10">
         {Array.from({ length: cookieJar }).map((_, i) => (

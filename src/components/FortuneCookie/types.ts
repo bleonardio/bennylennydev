@@ -1,4 +1,4 @@
 export type TFortune = {
-  fortune: string;
+  text: string;
   score: number;
 }
