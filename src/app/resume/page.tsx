@@ -27,6 +27,15 @@ function Page() {
             />
 
             <ResumeItem
+              title="NASA S.U.I.T.S. Challenge — Developer"
+              timeline="Spring 2018 – Fall 2019"
+              listItems={[
+                'Collaborated with a team of students at Boise State to build an augmented reality (AR) informatics system for NASA astronauts on spacewalks',
+                'Built a web interface to support mission control communication with the AR system'
+              ]}
+            />
+
+            <ResumeItem
               title="Mary Ellen Ryder Linguistics Lab — Intern"
               timeline="Spring 2019 – Fall 2019"
               listItems={['Co-led full site overhaul for the {{boiseInterpretersLink}} website', 'Supported the launch of the Languages of Boise Project and assisted with lab maintenance']}
@@ -41,15 +50,7 @@ function Page() {
               title="Department of English, Boise State University — Intern"
               timeline="Fall 2019"
               listItems={[
-                'Contributed to linguistics research for a drag ethnography study'
-              ]}
-            />
-
-            <ResumeItem
-              title="NASA S.U.I.T.S. Challenge — Developer"
-              timeline="Spring 2018 – Fall 2019"
-              listItems={[
-                'Collaborated with a team of students at Boise State to build an augmented reality informatics system for NASA astronauts on spacewalks'
+                'Transcribed and analyzed video footage using critical discourse analysis notation for an ethnographic study on drag performance and identity'
               ]}
             />
 
