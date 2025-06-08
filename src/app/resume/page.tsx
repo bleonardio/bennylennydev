@@ -39,11 +39,11 @@ function Page() {
               title="Mary Ellen Ryder Linguistics Lab — Intern"
               timeline="Spring 2019 – Fall 2019"
               listItems={['Co-led full site overhaul for the {{boiseInterpretersLink}} website', 'Supported the launch of the Languages of Boise Project and assisted with lab maintenance']}
-              embeddedLinks={[{
+              embeddedLink={{
                 id: '{{boiseInterpretersLink}}',
                 href: 'https://www.boiseinterpreters.com',
                 text: 'Boise Interpreters',
-              }]}
+              }}
             />
 
             <ResumeItem

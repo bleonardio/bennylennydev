@@ -119,7 +119,6 @@ export const wandering: TPoem = {
         "lonely",
         "~",
         "~",
-        "~",
       ],
     },
     {

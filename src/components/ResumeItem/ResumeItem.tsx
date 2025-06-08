@@ -1,7 +1,7 @@
 import {Pill} from "@/components/Pill";
 import {PillStyle} from "@/components/Pill/Pill";
 
-type EmbededLink = {
+type EmbeddedLink = {
   href: string;
   text: string;
   id: string;
@@ -17,15 +17,21 @@ type ResumeItemProps = {
   subtitle?: string;
   timeline?: string;
   listItems?: string[];
-  embeddedLinks?:  EmbededLink[];
+  embeddedLink?:  EmbeddedLink;
   keyValueItems?: KeyValueItem[];
 }
 
-const ResumeItem = ({title, subtitle, timeline, listItems, embeddedLinks, keyValueItems }: ResumeItemProps) => {
-
+const ResumeItem = ({
+  title,
+  subtitle,
+  timeline,
+  listItems,
+  embeddedLink,
+  keyValueItems,
+}: ResumeItemProps) => {
   return (
     <div className="resumeItem">
-      <Pill text={title} style={PillStyle.Blue} classes="mt-4" />
+      <Pill text={title} classes="mt-4" />
 
       {subtitle && (<p className="italic my-2 ml-2">{subtitle}</p>)}
 
@@ -34,7 +40,9 @@ const ResumeItem = ({title, subtitle, timeline, listItems, embeddedLinks, keyVal
       {listItems && (
         <ul className="list-disc ml-6 mt-2">
           {listItems?.map((item) => (
-            <li key={item} className="mb-2 last:mb-0">{_interpolate(item, embeddedLinks )}</li>
+            <li key={item} className="mb-2 last:mb-0">
+              {_interpolate(item, embeddedLink )}
+            </li>
           ))}
         </ul>
       )}
@@ -42,7 +50,12 @@ const ResumeItem = ({title, subtitle, timeline, listItems, embeddedLinks, keyVal
       {keyValueItems && (
         <div className="ml-4 mt-2">
           {keyValueItems?.map((item) => (
-            <p key={item.key} className="mb-2"><span className="font-bold">{item.key}:</span> {item.value}</p>
+            <p
+              key={item.key}
+              className="mb-2"
+            >
+              <span className="font-bold">{item.key}:</span> {item.value}
+            </p>
           ))}
         </div>
       )}
@@ -50,10 +63,17 @@ const ResumeItem = ({title, subtitle, timeline, listItems, embeddedLinks, keyVal
   );
 }
 
-// todo need some research assistance here to: get targeting logic dynamc and get styles applied to the element. not being picked up with the string to danderous insert html approach.
-function _interpolate(text: string, embeddedLinks: EmbededLink[]) {
-  // search for the id and replace it with an a tag with embedded link deets, then return jsx
-  const interpolated = text.replace('{{boiseInterpretersLink}}', `<a href="https://www.boiseinssserpreters.com" className="cursor-pointer text-blue-500 hover:text-blue-600 underline">Boise Interpreters</a>`)
+// This could be extended to use the custom Link component, and support embedding multiple links,
+// but I'm opting to leave it tailored to my simple use case until the need arises for more flexibility here.
+function _interpolate(text: string, embeddedLink?: EmbeddedLink) {
+  if (!embeddedLink) {
+    return text;
+  }
+
+  const interpolated = text.replace(
+    embeddedLink.id,
+    `<a href="${embeddedLink.href}" target="_blank" class="cursor-pointer text-blue-500 hover:text-blue-600 underline">${embeddedLink.text}</a>`
+  );
 
   return <p dangerouslySetInnerHTML={{ __html: interpolated }} />
 }

@@ -58,12 +58,6 @@ export const belatedBoyhood: TPoem = {
       ],
     },
     {
-      id: "8",
-      lines: [
-        "I stopped shaving my legs before I decided I wanted to be a man",
-      ],
-    },
-    {
       id: "9",
       lines: [
         "I’m still learning to speak my truth",

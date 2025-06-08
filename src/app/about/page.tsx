@@ -1,6 +1,6 @@
 'use client';
 
-import { Card, Link, Pill, PageLayout } from "@/components";
+import {Card, Pill, Link, PageLayout } from "@/components";
 
 function Page() {
   return (
@@ -15,10 +15,10 @@ function Page() {
         Let's cut to the chase: I grew up in Idaho and spent most of my life in a classroom, with the band or on a
         soccer field. I followed some calls for adventure abroad, and am currently based in Amsterdam where I have lived
         for the past couple years but what has felt already like a lifetimes worth of lessons - and expected no less
-        living on a saturn line. ¯\_(ツ)_/¯
+        living on a Saturn line. ¯\_(ツ)_/¯
       </p>
       <p className="mb-4">
-        I’ve watched friends come and go, interests come and go, identities come and go and as the years go by, I am
+        I’ve had friends come and go, interests come and go, identities come and go and as the years go by, I am
         gaining more confidence in my ability to “handle the seasons of my life” (Landslide, Fleetwood mac).
       </p>
       <p className="mb-4">
