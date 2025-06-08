@@ -38,7 +38,7 @@ function Page() {
         </div>
       </div>
 
-      <h1 className="text-2xl font-bold mb-4 mt-10">Theater</h1>
+      <h1 className="text-2xl font-bold mb-4 mt-10">Featured Films</h1>
 
       <h2 className="text-xl font-bold mb-4 my-4">Caroling</h2>
 

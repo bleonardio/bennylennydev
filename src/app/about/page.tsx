@@ -1,10 +1,18 @@
 'use client';
 
-import {Card, Pill, Link, PageLayout } from "@/components";
+import {Card, Pill, Link, PageLayout, Polaroid} from "@/components";
+import Placeholder from "../../../public/placeholder.webp";
 
 function Page() {
   return (
     <PageLayout title="About">
+
+      <div className="grid grid-cols-3 gap-6 pt-4 pb-8">
+        <Polaroid label="test" src={Placeholder} alt="placeholder" />
+        <Polaroid label="test" src={Placeholder} alt="placeholder" />
+        <Polaroid label="test" src={Placeholder} alt="placeholder" />
+      </div>
+
       <p className="mb-4">
         Hello! I’m Bennett and you’re probably wondering whats going on here - me too.
       </p>
@@ -23,7 +31,7 @@ function Page() {
       </p>
       <p className="mb-4">
         I am working as a software engineer at <Link text="Lovevery" href="https://www.lovevery.com" isExternal={true}/> but when I'm not working I can be found
-        gardening, sleeping, sketching, gaming, making cocktails or doing nothing (underrated).
+        gardening, sleeping, sketching, climbing, making cocktails or doing nothing (underrated).
       </p>
 
       <p className="mb-4">Currently I am:</p>
