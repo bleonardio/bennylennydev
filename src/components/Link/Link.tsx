@@ -5,16 +5,19 @@ type LinkProps = {
   href: string;
   isExternal?: boolean;
   onClick?: () => void;
+  classes?: string;
 }
 
-const AppLink = ({ text, href, isExternal = false, onClick }: LinkProps) => {
+const AppLink = ({ text, href, isExternal = false, onClick, classes }: LinkProps) => {
+
+  const className = `cursor-pointer text-blue-500 hover:text-blue-600 underline ${classes}`;
 
   if (isExternal) {
     return (
       <a
         href={href}
         onClick={onClick}
-        className="cursor-pointer text-blue-500 hover:text-blue-600 underline"
+        className={className}
         target={'_blank'}
         rel="noopener noreferrer"
       >
@@ -24,7 +27,7 @@ const AppLink = ({ text, href, isExternal = false, onClick }: LinkProps) => {
   }
 
   return (
-    <Link href={href} className="cursor-pointer text-blue-500 hover:text-blue-600 underline">
+    <Link href={href} className={className} onClick={onClick}>
       {text}
     </Link>
   );

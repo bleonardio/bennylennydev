@@ -1,18 +1,23 @@
-import {PageLayout} from "@/components";
+import {Link, PageLayout} from "@/components";
+import { Poem } from "@/components/Poem";
+import {belatedBoyhood} from "@/components/Poem/data/belated-boyhood";
 
 function Page() {
   return (
     <PageLayout title="Projects">
-      <p>poems</p>
+      <h1 className="text-2xl font-bold my-4">Poetry</h1>
+      <Poem poem={belatedBoyhood} />
       {/*  todo: new component for image display, like film printed images, */}
       {/* pill comp: maybe support emoji, different colors */}
       {/* interactivity, semantic html, test coverage, footer build, responsive header, header closes on page nav, upload photos and poems and get short film links - maybe yt video embeds. */}
 
       <p>sketches</p>
+      <h1 className="text-2xl font-bold my-4">Sketches</h1>
 
-      <p>short films</p>
 
-      <p>caroling!</p>
+      <h1 className="text-2xl font-bold my-4">Featured Films</h1>
+
+      <h2 className="text-xl font-bold my-4">Caroling</h2>
       <div className="flex gap-4">
         <iframe width="560" height="315" src="https://www.youtube.com/embed/b823mYrSwTU?si=0e8zBuU5ZtnP-5sb"
                 title="YouTube video player" frameBorder="0"
@@ -27,7 +32,8 @@ function Page() {
                 allowFullScreen></iframe>
       </div>
 
-      <p>i48 film festival</p>
+      <h2 className="text-xl font-bold my-4">i48 Film Festival</h2>
+      <Link href="https://www.idaho48.org/" text="Explore"  isExternal />
 
       <div className="flex gap-4">
         <iframe width="560" height="315" src="https://www.youtube.com/embed/SvhSJEC2AmE?si=jZKF-qQ6A50qUq-0"
@@ -43,8 +49,7 @@ function Page() {
                 allowFullScreen></iframe>
       </div>
 
-      <p>NASA SUITS</p>
-
+      <h2 className="text-xl font-bold my-4">NASA SUITS Highlights</h2>
       <div className="flex gap-4 mt-4">
         <iframe width="560" height="315" src="https://www.youtube.com/embed/uBQcOnx4BX0?si=np_agmY7HTCzaGM6"
                 title="YouTube video player" frameBorder="0"
