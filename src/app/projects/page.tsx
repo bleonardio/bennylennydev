@@ -28,15 +28,15 @@ function Page() {
 
       <div className="grid grid-cols-2 gap-6 pt-4">
         <div className="flex flex-col gap-6">
-          <Polaroid label="Himarë coastline, mixed media" src={HimareLeftCoastline} alt="mixed media sketch of the Himarë coastline" />
-          <Polaroid label="Keukenhof plower, pen" src={Orchid} alt="purple, petaled flower - pen on paper" />
-          <Polaroid label="Sakura Sushi Bar, colored pencil" src={SakuraSushiBar} alt="placeholder" />
+          <Polaroid label="Himarë coastline, mixed media" src={HimareLeftCoastline} alt="pastel and pen on paper, sketch of the Himarë coastline" />
+          <Polaroid label="Keukenhof Orchid, mixed media" src={Orchid} alt="pastel and pen on paper, orchid flower" />
+          <Polaroid label="Sakura Sushi Bar, colored pencil" src={SakuraSushiBar} alt="red colored pencil, monochrome sketch of a bar" />
         </div>
 
         <div className="flex flex-col gap-6">
-          <Polaroid label="Himarë coastline, pastel" src={HimareRightCoastline} alt="pastel sketch of the Himarë coastline" />
-          <Polaroid label="Keukenhof Flower, pen" src={PurpleFlowerPastel} alt="purple, petaled flower - pastel on paper" />
-          <Polaroid label="Mountain pass, pastel" src={MountainPass} alt="placeholder" />
+          <Polaroid label="Himarë coastline, pastel" src={HimareRightCoastline} alt="pastel on paper, sketch of the Himarë coastline" />
+          <Polaroid label="Keukenhof Flower, pen" src={PurpleFlowerPastel} alt="pastel on paper, purple, petaled flower" />
+          <Polaroid label="Mountain pass, pastel" src={MountainPass} alt="pastel on paper, sketch of a mountain landscape featuring a swingset, trees and wildflowers" />
         </div>
       </div>
 
