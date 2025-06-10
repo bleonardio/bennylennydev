@@ -9,8 +9,8 @@ type TPoemProps = {
 
 const Poem = ({ poem }: TPoemProps) => {
   return (
-    <div data-testid="poem" className="p-4 bg-amber-100 rounded-sm shadow-md">
-      <h2 className="mb-2 text-black font-bold">{poem.title}</h2>
+    <div data-testid="poem" className="p-4 bg-light rounded-md shadow-md">
+      <h2 className="mb-2 text-base font-bold">{poem.title}</h2>
 
       {poem.phrases.map((phrase) => (
         <Phrase key={phrase.id} lines={phrase.lines} />

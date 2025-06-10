@@ -5,7 +5,7 @@ type PhraseProps = {
 
 const Phrase = ({ lines } : PhraseProps) => {
   return (
-    <div className="mb-4 text-black">
+    <div className="mb-4">
       {lines.map((line, i) => (
         line === "~" ? (
           <div key={`${line}-${i}`} className="h-4" />

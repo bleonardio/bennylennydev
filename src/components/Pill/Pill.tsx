@@ -1,7 +1,8 @@
 
 export enum PillStyle {
-  Blue = 'blue',
-  Red = 'red',
+  Primary = 'primary',
+  Secondary = 'secondary',
+  Accent = 'accent',
 }
 
 type PillProps = {
@@ -10,10 +11,11 @@ type PillProps = {
   classes?: string;
 }
 
-const Pill = ({ text, style = PillStyle.Blue, classes }: PillProps) => {
+const Pill = ({ text, style = PillStyle.Primary, classes }: PillProps) => {
   const pillStyles = {
-    [PillStyle.Blue]: "bg-blue-500 text-white",
-    [PillStyle.Red]: "bg-red-500 text-white",
+    [PillStyle.Primary]: "bg-primary text-white",
+    [PillStyle.Secondary]: "bg-secondary text-white",
+    [PillStyle.Accent]: "bg-secondary text-white",
   }
 
   return (

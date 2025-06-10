@@ -28,7 +28,7 @@ const FortuneCookie = ({ cb, onClick, fortune }: FortuneCookieProps) => {
     <div className={classNames({['cursor-pointer']: !isOpened })} onClick={handleClick}>
       {isOpened ? (
         <div className="h-[222px] flex items-center justify-center">
-          <p className="p-4 rotate-3 bg-white text-amber-800 w-full text-center">
+          <p className="p-4 rotate-3 bg-light text-base w-full text-center">
             {fortune?.text}
           </p>
         </div>
