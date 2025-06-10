@@ -1,4 +1,5 @@
 import {Pill} from "@/components/Pill";
+import {PillStyle} from "@/components/Pill/Pill";
 
 type EmbeddedLink = {
   href: string;
@@ -30,7 +31,7 @@ const ResumeItem = ({
 }: ResumeItemProps) => {
   return (
     <div className="resumeItem">
-      <Pill text={title} classes="mt-4" />
+      <Pill text={title} classes="mt-4" style={PillStyle.Secondary} />
 
       {subtitle && (<p className="italic my-2 ml-2">{subtitle}</p>)}
 
@@ -71,7 +72,7 @@ function _interpolate(text: string, embeddedLink?: EmbeddedLink) {
 
   const interpolated = text.replace(
     embeddedLink.id,
-    `<a href="${embeddedLink.href}" target="_blank" class="cursor-pointer text-blue-500 hover:text-blue-600 underline">${embeddedLink.text}</a>`
+    `<a href="${embeddedLink.href}" target="_blank" class="cursor-pointer text-secondary hover:text-secondary-hover">${embeddedLink.text}</a>`
   );
 
   return <p dangerouslySetInnerHTML={{ __html: interpolated }} />

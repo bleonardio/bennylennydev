@@ -20,7 +20,7 @@ const Header = () => {
   const activeNavItemClasses = 'font-bold text-secondary-hover';
 
   return (
-    <header className="flex justify-between items-center bg-primary-dark p-4 sticky top-0 z-20">
+    <header className="flex justify-between items-center bg-primary-dark p-4 sticky top-0 z-50">
       <NextLink href="/" title='bennylenny.dev' className="flex items-center">
         <Image src={SiteLogo} alt="bennylenny.dev" height={50} width={50} />
         <p className="font-bold text-secondary hover:text-secondary-hover">ennylenny.dev</p>
