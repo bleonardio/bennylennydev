@@ -12,7 +12,7 @@ function Page() {
     <PageLayout title="Projects">
       <h1 className="text-2xl font-bold my-4">Poetry</h1>
 
-      <div className="grid grid-cols-2 gap-6">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         <div className="flex flex-col gap-6">
           <Poem poem={belatedBoyhood} />
           <Poem poem={fragments} />
@@ -26,7 +26,7 @@ function Page() {
 
       <h1 className="text-2xl font-bold mb-4 mt-10">Sketches</h1>
 
-      <div className="grid grid-cols-2 gap-6 pt-4">
+      <div className="grid grid-cols1 md:grid-cols-2 gap-6 pt-4">
         <div className="flex flex-col gap-6">
           <Polaroid label="Himarë coastline, mixed media" src={HimareLeftCoastline} alt="pastel and pen on paper, sketch of the Himarë coastline" />
           <Polaroid label="Keukenhof Orchid, mixed media" src={Orchid} alt="pastel and pen on paper, orchid flower" />

@@ -10,7 +10,7 @@ type FortuneCookieProps = {
   onClick?: () => void;
 };
 
-const FortuneCookie = ({ cb, onClick }: FortuneCookieProps) => {
+const FortuneCookie = ({ cb, onClick, shouldExplode }: FortuneCookieProps) => {
   const [isOpened, setIsOpened] = useState(false);
 
   const fortuneRef = useRef(fortunes[Math.floor(Math.random() * fortunes.length)]);

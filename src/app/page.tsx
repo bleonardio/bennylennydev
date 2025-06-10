@@ -58,7 +58,7 @@ export default function Home() {
 
   function Scoreboard() {
     return (
-      <div className="bg-amber-200 border-red-700 border-4  rounded-md text-black p-4 mx-auto">
+      <div className="bg-amber-200 border-red-700 border-4  rounded-md text-black p-4 mx-auto sticky top-0 z-10">
         <p>Score: {overallScore}</p>
         <p>{fortuneClassification}</p>
 
@@ -82,18 +82,29 @@ export default function Home() {
     );
   }
 
+  function ConfettiBlock() {
+    return (
+      <>
+        {isGameFinished && (
+          <div className="grid grid-cols-3">
+            <ConfettiExplosion particleCount={200} />
+            <ConfettiExplosion particleCount={200} />
+            <ConfettiExplosion particleCount={200} />
+          </div>
+        )}</>
+    );
+  }
+
   return (
     <PageLayout>
-      {isGameFinished && (
-        <div className="grid grid-cols-3">
-          <ConfettiExplosion particleCount={200} />
-          <ConfettiExplosion particleCount={200} />
-          <ConfettiExplosion particleCount={200} />
-        </div>
-      )}
+
+      <ConfettiBlock />
+
       <Scoreboard />
 
-      <div className="grid grid-cols-3 gap-6 my-10">
+      <ConfettiBlock />
+
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 my-10">
         {Array.from({ length: cookiesAvailable }).map((_, i) => (
           <FortuneCookie
             key={i}

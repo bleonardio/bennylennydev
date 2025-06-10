@@ -7,7 +7,7 @@ type PageLayoutProps = {
 
 const PageLayout = ({ title, children }: PageLayoutProps) => {
   return (
-    <section className="container mx-auto my-10">
+    <section className="container mx-auto my-10 px-4">
       {title && (
         <h1 className="text-3xl font-bold my-4">
           {title}
