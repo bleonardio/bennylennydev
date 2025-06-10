@@ -17,20 +17,20 @@ function Page() {
         Hello! I’m Bennett and you’re probably wondering whats going on here - me too.
       </p>
       <p className="mb-4">
-        Let's start from the beginning: 13.8 billion years ag—
+        Let&apos;s start from the beginning: 13.8 billion years ag—
       </p>
       <p className="mb-4">
-        Let's cut to the chase: I grew up in Idaho and spent most of my life in a classroom, with the band or on a
+        Let&apos;s cut to the chase: I grew up in Idaho and spent most of my life in a classroom, with the band or on a
         soccer field. I followed some calls for adventure abroad, and am currently based in Amsterdam where I have lived
         for the past couple years but what has felt already like a lifetimes worth of lessons - and expected no less
         living on a Saturn line. ¯\_(ツ)_/¯
       </p>
       <p className="mb-4">
-        I’ve had friends come and go, interests come and go, identities come and go and as the years go by, I am
+        I&apos;ve had friends come and go, interests come and go, identities come and go and as the years go by, I am
         gaining more confidence in my ability to “handle the seasons of my life” (Landslide, Fleetwood Mac).
       </p>
       <p className="mb-4">
-        I am working as a software engineer at <Link text="Lovevery" href="https://www.lovevery.com" isExternal={true}/> but when I'm not working I can be found
+        I am working as a software engineer at <Link text="Lovevery" href="https://www.lovevery.com" isExternal={true}/> but when I&apos;m not working I can be found
         gardening, sleeping, sketching, climbing, making cocktails or doing nothing (underrated).
       </p>
 
@@ -38,29 +38,25 @@ function Page() {
 
       <div className="grid grid-cols-1 md:grid-cols-4 gap-6 pb-8">
         <Card front="Studying" back="Herbalism, Palmistry, Mixology, Astrology"/>
-
         <Card front="Watching" back="White Lotus, Taskmaster, One Piece"/>
-
         <Card front="Playing" back="Disney Dreamlight Valley"/>
-
         <Card front="Reading" back="Surviving Saturn Return by Caggie Dunlop, How to Read a Tree by Tristan Gooley" />
-
       </div>
 
       <p className="my-4">Labels I vibe with:</p>
-      <div className="flex gap-6 flex-wrap">
 
-        <Pill text="Goofy little guy"/>
-        <Pill text="Guitar Hero enthusiast"/>
-        <Pill text="Writer of poems and code"/>
+      <div className="flex gap-6 flex-wrap">
+        <Pill text="Goofy little guy" />
+        <Pill text="Guitar Hero enthusiast" />
+        <Pill text="Writer of poems and code" />
         <Pill text="Trans masc"/>
         <Pill text="Queer"/>
-        <Pill text="Scorpio sun"/>
-        <Pill text="Sag rising"/>
-        <Pill text="Leo moon"/>
-        <Pill text="Developer"/>
-        <Pill text="Musician"/>
-        <Pill text="Beach boy"/>
+        <Pill text="Scorpio sun" />
+        <Pill text="Sag rising" />
+        <Pill text="Leo moon" />
+        <Pill text="Developer" />
+        <Pill text="Musician" />
+        <Pill text="Beach boy" />
       </div>
     </PageLayout>
   );

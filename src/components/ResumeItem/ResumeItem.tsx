@@ -1,5 +1,4 @@
 import {Pill} from "@/components/Pill";
-import {PillStyle} from "@/components/Pill/Pill";
 
 type EmbeddedLink = {
   href: string;

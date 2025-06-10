@@ -14,13 +14,10 @@ function Page() {
           <Poem poem={roots} />
         </div>
         <div className="flex flex-col gap-6">
-          <Poem poem={borrowed} />
           <Poem poem={wandering} />
+          <Poem poem={borrowed} />
         </div>
       </div>
-
-      {/* todo: color scheme & font choice */}
-      {/* todo: transitions, content pass, semantic html check, responsiveness / mobile friendly, upload sketch photos  */}
 
       <h1 className="text-2xl font-bold mb-4 mt-10">Sketches</h1>
 
@@ -57,14 +54,13 @@ function Page() {
       </div>
 
       <h2 className="text-xl font-bold my-4">NASA SUITS Highlights</h2>
-      <p className="mb-2">Information and visual aids of the system known as A.R.S.I.S. (Augmented Reality Space Informatics System).</p>
+      <p className="mb-2">
+        Information and visual aids of the system known as A.R.S.I.S. (Augmented Reality Space Informatics System).
+      </p>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4 pb-6">
         <CinemaScreen src="https://www.youtube.com/embed/uBQcOnx4BX0?si=np_agmY7HTCzaGM6" />
         <CinemaScreen src="https://www.youtube.com/embed/2SpvelKB3VM?si=EKfe85y_wcovBZjb" />
-
-        {/*  publication link: https://scholarworks.boisestate.edu/under_conf_2019/95/ */}
-        {/*  bsu link: https://www.boisestate.edu/news/2020/06/11/suits-team-to-virtually-present-heads-up-display-technology-to-nasa-panel/*/}
       </div>
 
     </PageLayout>

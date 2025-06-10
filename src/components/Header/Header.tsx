@@ -1,8 +1,11 @@
 'use client';
 
-import { Link } from "@/components/Link";
+import Image from "next/image";
+import NextLink from 'next/link'
 import classNames from "classnames";
 import {usePathname} from "next/navigation";
+import SiteLogo from '@/../public/site-logo.png'
+import { Link } from "@/components/Link";
 
 const Header = () => {
   const pathname = usePathname();
@@ -19,7 +22,11 @@ const Header = () => {
     <header>
       <div className="flex justify-between items-center bg-amber-200 p-4">
 
-        <Link href="/" text="bennylenny.dev" classes={classNames({ [activeNavItemClasses]: pathname === '/' })} />
+        <NextLink href="/" title='bennylenny.dev' className="flex items-center">
+          <Image src={SiteLogo} alt="bennylenny.dev" height={50} width={50} />
+          <p className="font-bold text-black">ennylenny.dev</p>
+        </NextLink>
+
 
         <div className="flex justify-center items-center gap-2">
           {navItems.map((item) => (

@@ -12,7 +12,7 @@ function Page() {
               timeline="January 2020 - Present"
               listItems={[
                 'Promoted to Senior Software Engineer Spring 2025',
-                'Experience building high visibility customer-facing features (e.g. subscription management tools, product, cart and checkout pages) and internal tools (e.g. admin portal interfaces for the customer experience team)',
+                'Experience building high visibility customer-facing features in e-commerce and subscription domain (e.g. subscription management tools, product, cart and checkout pages) and internal tools (e.g. admin portal interfaces for internal use)',
                 'Experience working closely with product managers, designers, and business stakeholders to scope and deliver intuitive, resilient user experiences',
                 'Led front-end development for an in-house web video player to support digital course products',
                 'Led front end development for a new customer subscription management page, migrating complex legacy functionality to a new application while preserving key business logic and user flows',
@@ -31,8 +31,14 @@ function Page() {
               timeline="Spring 2018 – Fall 2019"
               listItems={[
                 'Collaborated with a team of students at Boise State to build an augmented reality (AR) informatics system for NASA astronauts on spacewalks',
-                'Built a web interface to support mission control communication with the AR system'
+                'Built a web interface to support mission control communication with the AR system',
+                '{{publication}}'
               ]}
+              embeddedLink={{
+                id: '{{publication}}',
+                href: 'https://scholarworks.boisestate.edu/under_conf_2019/95/',
+                text: 'ScholarWorks Publication',
+              }}
             />
 
             <ResumeItem
@@ -100,7 +106,7 @@ function Page() {
               keyValueItems={[
                 {
                   key: 'Languages',
-                  value: 'Python, Ruby, Liquid, Java, SQL, C, Bash, Pug',
+                  value: 'Python, Ruby, Liquid, Java, SQL, C, Pug',
                 },
                 {
                   key: 'Libraries & Frameworks',
