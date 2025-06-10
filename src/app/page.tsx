@@ -62,7 +62,8 @@ export default function Home() {
 
   function Scoreboard() {
     return (
-      <div className="bg-accent text-light text-base p-4 mx-auto sticky top-0 z-10">
+      // anchor sticky scoreboard below the site sticky header
+      <div className="bg-accent text-light text-base p-4 mx-auto sticky top-[82px] z-10">
         <p>Score: {overallScore}</p>
         <p>{fortuneClassification}</p>
       </div>

@@ -18,7 +18,15 @@ type LinkProps = {
   style?: LinkStyle;
 }
 
-const AppLink = ({ text, href, isExternal = false, onClick, classes, children, style = LinkStyle.Primary }: LinkProps) => {
+const AppLink = ({
+  text,
+  href,
+  isExternal = false,
+  onClick,
+  classes,
+  children,
+  style = LinkStyle.Primary,
+}: LinkProps) => {
   const styleMap = {
     [LinkStyle.Primary]: 'cursor-pointer text-primary hover:text-primary-hover',
     [LinkStyle.Secondary]: 'cursor-pointer text-secondary hover:text-secondary-hover',
@@ -40,7 +48,11 @@ const AppLink = ({ text, href, isExternal = false, onClick, classes, children, s
   }
 
   return (
-    <Link href={href} className={classNames(styleMap[style], classes)} onClick={onClick}>
+    <Link
+      href={href}
+      className={classNames(styleMap[style], classes)}
+      onClick={onClick}
+    >
       {text || children}
     </Link>
   );

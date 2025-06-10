@@ -19,7 +19,9 @@ const Pill = ({ text, style = PillStyle.Primary, classes }: PillProps) => {
   }
 
   return (
-    <p className={`py-1 px-6 rounded-3xl w-fit font-bold ${pillStyles[style]} ${classes}`}>{text}</p>
+    <p className={`py-1 px-6 rounded-3xl w-fit font-bold ${pillStyles[style]} ${classes}`}>
+      {text}
+    </p>
   );
 }
 

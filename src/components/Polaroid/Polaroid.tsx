@@ -9,7 +9,11 @@ type PolaroidProps = {
 const Polaroid = ({ src, alt, label }: PolaroidProps)=> {
   return (
     <div className="p-4 bg-light rounded-md shadow-md rotate-2">
-      <Image src={src} alt={alt} />
+      <Image
+        src={src}
+        alt={alt}
+      />
+
       <p className="mt-2">{label}</p>
     </div>
   );

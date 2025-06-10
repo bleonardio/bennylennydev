@@ -1,5 +1,5 @@
-import {Pill} from "@/components/Pill";
-import {PillStyle} from "@/components/Pill/Pill";
+import { Pill } from "@/components/Pill";
+import { PillStyle } from "@/components/Pill/Pill";
 
 type EmbeddedLink = {
   href: string;
@@ -31,7 +31,11 @@ const ResumeItem = ({
 }: ResumeItemProps) => {
   return (
     <div className="resumeItem">
-      <Pill text={title} classes="mt-4" style={PillStyle.Secondary} />
+      <Pill
+        text={title}
+        classes="mt-4"
+        style={PillStyle.Secondary}
+      />
 
       {subtitle && (<p className="italic my-2 ml-2">{subtitle}</p>)}
 
