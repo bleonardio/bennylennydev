@@ -5,7 +5,22 @@ module.exports = {
     './src/components/**/*.{js,ts,jsx,tsx}',
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        primary: '#143109',
+        secondary: '#E26572',
+        'secondary-hover': '#DC4958',
+        accent: '#A37CC3',
+        'accent-hover': '#8450AE',
+        base: '#3B2C35',
+        light: '#fff',
+        'light-hover': '#e5e5e5'
+      },
+      fontFamily: {
+        sans: ['Graphik', 'sans-serif'],
+        serif: ['Lora', 'serif'],
+      },
+    },
   },
   plugins: [],
 }
