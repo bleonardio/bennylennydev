@@ -1,6 +1,11 @@
 import {CinemaScreen, PageLayout, Poem, Polaroid} from "@/components";
 import { belatedBoyhood, borrowed, fragments, roots, wandering } from "@/components/Poem/data";
-import Placeholder from '@/../public/placeholder.webp'
+import HimareLeftCoastline from '@/../public/art/himare-left-coastline.jpg'
+import HimareRightCoastline from '@/../public/art/himare-right-coastline.jpg'
+import PurpleFlowerPastel from '@/../public/art/purple-flower-pastel.jpg'
+import Orchid from '@/../public/art/orchid-mixed-media.jpg'
+import SakuraSushiBar from '@/../public/art/sushi-bar-pencil.jpg'
+import MountainPass from '@/../public/art/mountain-pass-pastel.jpg'
 
 function Page() {
   return (
@@ -23,15 +28,15 @@ function Page() {
 
       <div className="grid grid-cols-2 gap-6 pt-4">
         <div className="flex flex-col gap-6">
-          <Polaroid label="test" src={Placeholder} alt="placeholder" />
-          <Polaroid label="test" src={Placeholder} alt="placeholder" />
-          <Polaroid label="test" src={Placeholder} alt="placeholder" />
+          <Polaroid label="Himarë coastline, mixed media" src={HimareLeftCoastline} alt="mixed media sketch of the Himarë coastline" />
+          <Polaroid label="Keukenhof plower, pen" src={Orchid} alt="purple, petaled flower - pen on paper" />
+          <Polaroid label="Sakura Sushi Bar, colored pencil" src={SakuraSushiBar} alt="placeholder" />
         </div>
 
         <div className="flex flex-col gap-6">
-          <Polaroid label="test" src={Placeholder} alt="placeholder" />
-          <Polaroid label="test" src={Placeholder} alt="placeholder" />
-          <Polaroid label="test" src={Placeholder} alt="placeholder" />
+          <Polaroid label="Himarë coastline, pastel" src={HimareRightCoastline} alt="pastel sketch of the Himarë coastline" />
+          <Polaroid label="Keukenhof Flower, pen" src={PurpleFlowerPastel} alt="purple, petaled flower - pastel on paper" />
+          <Polaroid label="Mountain pass, pastel" src={MountainPass} alt="placeholder" />
         </div>
       </div>
 
