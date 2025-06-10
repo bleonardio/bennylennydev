@@ -1,20 +1,18 @@
 'use client';
 
 import classNames from "classnames";
-import { fortunes } from "./fortunes";
-import { useState, useRef } from "react";
+import { useState } from "react";
+import { TFortune } from "./types";
 import { FortuneCookieIcon } from "@/components/Icons";
 
 type FortuneCookieProps = {
+  fortune: TFortune;
   cb?: (score: number) => void;
   onClick?: () => void;
 };
 
-const FortuneCookie = ({ cb, onClick, shouldExplode }: FortuneCookieProps) => {
+const FortuneCookie = ({ cb, onClick, fortune }: FortuneCookieProps) => {
   const [isOpened, setIsOpened] = useState(false);
-
-  const fortuneRef = useRef(fortunes[Math.floor(Math.random() * fortunes.length)]);
-  const fortune = fortuneRef.current;
 
   function handleClick() {
     onClick?.();

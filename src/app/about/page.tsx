@@ -34,6 +34,8 @@ function Page() {
         gardening, sleeping, sketching, climbing, making cocktails or doing nothing (underrated).
       </p>
 
+      <p></p>
+
       <p className="mb-4">Currently I am:</p>
 
       <div className="grid grid-cols-1 md:grid-cols-4 gap-6 pb-8">
@@ -41,22 +43,29 @@ function Page() {
         <Card front="Watching" back="White Lotus, Taskmaster, One Piece"/>
         <Card front="Playing" back="Disney Dreamlight Valley"/>
         <Card front="Reading" back="Surviving Saturn Return by Caggie Dunlop, How to Read a Tree by Tristan Gooley" />
+        <Card front="Listening to" back="Big Thief, Beach Boys, Wynton Marsallis, Miles Davis" />
+        <Card front="Wearing" back="Bombas Slippers || Docs" />
+        <Card front="Likes" back="sketching flowers, the feeling of crawling into bed after a shower, discovering new music" />
+        <Card front="Dislikes" back="people spitting in public places, European showers, heavy cologne / perfume" />
       </div>
 
       <p className="my-4">Labels I vibe with:</p>
 
       <div className="flex gap-6 flex-wrap">
+        <Pill text="Scorpio sun" />
+        <Pill text="Sag rising" />
+        <Pill text="Leo moon" />
         <Pill text="Goofy little guy" />
         <Pill text="Guitar Hero enthusiast" />
         <Pill text="Writer of poems and code" />
         <Pill text="Trans masc"/>
+        <Pill text="Linguist" />
+        <Pill text="Band geek"/>
+        <Pill text="Neurodivergent" />
         <Pill text="Queer"/>
-        <Pill text="Scorpio sun" />
-        <Pill text="Sag rising" />
-        <Pill text="Leo moon" />
         <Pill text="Developer" />
-        <Pill text="Musician" />
         <Pill text="Beach boy" />
+        <Pill text="Musician" />
       </div>
     </PageLayout>
   );

@@ -10,7 +10,7 @@ type LinkProps = {
 
 const AppLink = ({ text, href, isExternal = false, onClick, classes }: LinkProps) => {
 
-  const className = `cursor-pointer text-blue-500 hover:text-blue-600 underline ${classes}`;
+  const className = `cursor-pointer text-text-light hover:text-text-light-hover underline ${classes}`;
 
   if (isExternal) {
     return (

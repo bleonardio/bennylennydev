@@ -20,11 +20,11 @@ const Header = () => {
 
   return (
     <header>
-      <div className="flex justify-between items-center bg-amber-200 p-4">
+      <div className="flex justify-between items-center bg-primary p-4">
 
         <NextLink href="/" title='bennylenny.dev' className="flex items-center">
           <Image src={SiteLogo} alt="bennylenny.dev" height={50} width={50} />
-          <p className="font-bold text-black">ennylenny.dev</p>
+          <p className="font-bold text-text-light">ennylenny.dev</p>
         </NextLink>
 
 
