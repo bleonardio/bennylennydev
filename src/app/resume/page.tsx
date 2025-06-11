@@ -64,6 +64,38 @@ function Page() {
         </div>
 
         <div data-testid="sidebar" className="flex flex-col gap-6">
+          <Island title="Technical Skills">
+
+            <ResumeItem
+              title="Daily Toolkit"
+              keyValueItems={[
+                {
+                  key: 'Languages',
+                  value: 'React, HTML, CSS, TypeScript, JavaScript',
+                },
+                {
+                  key: 'Libraries & Frameworks',
+                  value: 'Next.js, Storybook, Shopify, Tailwind, Jest, Playwright, Launchdarkly, Contentful, New Relic',
+                }
+              ]}
+            />
+
+
+            <ResumeItem
+              title="Experienced With"
+              keyValueItems={[
+                {
+                  key: 'Languages',
+                  value: 'Python, Ruby, Liquid, Java, SQL, C, Pug',
+                },
+                {
+                  key: 'Libraries & Frameworks',
+                  value: 'GraphQL, Kubernetes, Stripe, Google Analytics / Google Tag Manager, Rudderstack, Mux, Tableau',
+                }
+              ]}
+            />
+          </Island>
+
           <Island title="Education">
 
             <ResumeItem
@@ -82,37 +114,6 @@ function Page() {
               title="Summer Exchange"
               subtitle="Polytech Montpellier — Montpellier, France"
               timeline="Summer 2019"
-            />
-          </Island>
-
-          <Island title="Technical Skills">
-
-            <ResumeItem
-              title="Daily Toolkit"
-              keyValueItems={[
-                {
-                  key: 'Languages',
-                  value: 'React, HTML, CSS, TypeScript, JavaScript',
-                },
-                {
-                  key: 'Libraries & Frameworks',
-                  value: 'Next.js, Storybook, Shopify, Tailwind, Jest, Playwright, Launchdarkly, Contentful, New Relic',
-                }
-              ]}
-            />
-
-            <ResumeItem
-              title="Experienced With"
-              keyValueItems={[
-                {
-                  key: 'Languages',
-                  value: 'Python, Ruby, Liquid, Java, SQL, C, Pug',
-                },
-                {
-                  key: 'Libraries & Frameworks',
-                  value: 'GraphQL, Kubernetes, Stripe, Google Analytics / Google Tag Manager, Rudderstack, Mux, Tableau',
-                }
-              ]}
             />
           </Island>
 

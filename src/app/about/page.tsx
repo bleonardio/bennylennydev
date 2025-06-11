@@ -34,13 +34,13 @@ function Page() {
 
       <div className="grid grid-cols-1 md:grid-cols-4 gap-6 pb-8">
         <Card front="Studying" back="Herbalism, Palmistry, Mixology, Astrology"/>
-        <Card front="Watching" back="White Lotus, Taskmaster, One Piece"/>
+        <Card front="Watching" back="White Lotus, Taskmaster"/>
         <Card front="Playing" back="Disney Dreamlight Valley"/>
-        <Card front="Reading" back="Surviving Saturn Return by Caggie Dunlop, How to Read a Tree by Tristan Gooley" />
+        <Card front="Reading" back="How to Read a Tree by Tristan Gooley" />
         <Card front="Listening to" back="Big Thief, Beach Boys, Wynton Marsallis, Miles Davis" />
-        <Card front="Wearing" back="Bombas Slippers || Docs" />
-        <Card front="Likes" back="sketching flowers, the feeling of crawling into bed after a shower, discovering new music" />
-        <Card front="Dislikes" back="people spitting in public places, European showers, heavy cologne / perfume" />
+        <Card front="Wearing" back="Slippers || Docs" />
+        <Card front="Likes" back="The feeling of crawling into bed after a shower, discovering new music" />
+        <Card front="Dislikes" back="People spitting in public places, European showers, heavy cologne / perfume" />
       </div>
 
     </PageLayout>

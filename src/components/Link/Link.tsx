@@ -28,9 +28,9 @@ const AppLink = ({
   style = LinkStyle.Primary,
 }: LinkProps) => {
   const styleMap = {
-    [LinkStyle.Primary]: 'cursor-pointer text-primary hover:text-primary-hover',
-    [LinkStyle.Secondary]: 'cursor-pointer text-secondary hover:text-secondary-hover',
-    [LinkStyle.Light]: 'cursor-pointer text-light hover:text-light-hover',
+    [LinkStyle.Primary]: 'cursor-pointer text-primary hover:text-primary-hover font-bold',
+    [LinkStyle.Secondary]: 'cursor-pointer text-secondary hover:text-secondary-hover font-bold',
+    [LinkStyle.Light]: 'cursor-pointer text-light hover:text-light-hover font-bold',
   }
 
   if (isExternal) {
