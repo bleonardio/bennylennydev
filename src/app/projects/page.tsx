@@ -10,7 +10,7 @@ import MountainPass from '@/../public/art/mountain-pass-pastel.jpg'
 function Page() {
   return (
     <PageLayout title="Projects">
-      <h1 className="text-2xl font-bold mb-4 mt-10">Sketches</h1>
+      <h1 className="text-2xl font-bold mb-4">Sketches</h1>
 
       <div className="grid grid-cols1 md:grid-cols-2 gap-6 pt-4">
         <div className="flex flex-col gap-6">
