@@ -10,7 +10,7 @@ type TPoemProps = {
 const Poem = ({ poem }: TPoemProps) => {
   return (
     <div className="p-4 bg-light rounded-md shadow-md">
-      <h2 className="mb-2 text-base font-bold">
+      <h2 className="mb-2 font-bold">
         {poem.title}
       </h2>
 

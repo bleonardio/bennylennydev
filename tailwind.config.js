@@ -15,7 +15,7 @@ module.exports = {
         'secondary-hover': '#DC4958',
         accent: '#A37CC3',
         'accent-hover': '#8450AE',
-        base: '#3B2C35',
+        dark: '#3B2C35',
         light: '#fff',
         'light-hover': '#e5e5e5'
       },

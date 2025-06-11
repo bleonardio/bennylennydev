@@ -2,7 +2,7 @@
 import classNames from "classnames";
 import Image from "next/image";
 import NextLink from 'next/link'
-import {usePathname} from "next/navigation";
+import { usePathname } from "next/navigation";
 
 import SiteLogo from '@/../public/site-logo.png'
 import { Link } from "@/components/Link";
@@ -35,7 +35,7 @@ const Header = () => {
           width={50}
         />
         <p
-          className="font-bold text-secondary hover:text-secondary-hover">
+          className="font-bold text-secondary hover:text-secondary-hover text-sm md:text-lg">
           ennylenny.dev
         </p>
       </NextLink>
@@ -49,7 +49,7 @@ const Header = () => {
             style={LinkStyle.Secondary}
             classes={classNames({
               [activeNavItemClasses]: pathname === item.href
-            })}
+            }, 'md:text-lg text-sm')}
           />
         ))}
       </div>

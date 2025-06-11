@@ -31,7 +31,7 @@ const FortuneCookie = ({ cb, onClick, fortune }: FortuneCookieProps) => {
     >
       {isOpened ? (
         <div className="h-[222px] flex items-center justify-center">
-          <p className="p-4 rotate-3 bg-light text-base w-full text-center">
+          <p className="p-4 rotate-3 bg-light w-full text-center">
             {fortune?.text}
           </p>
         </div>

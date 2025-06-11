@@ -18,7 +18,7 @@ const Footer = () => {
         </Link>
 
         <p className="text-center">
-          © 2025 bennylenny.dev. All rights reserved.
+          © 2025 www.bennylenny.dev. All rights reserved.
         </p>
       </div>
     </footer>
