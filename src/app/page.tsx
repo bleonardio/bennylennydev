@@ -64,8 +64,10 @@ export default function Home() {
     return (
       // anchor sticky scoreboard below the site sticky header
       <div className="bg-accent text-light p-4 mx-auto sticky top-[82px] z-10">
+        <ConfettiBlock />
         <p>Score: {overallScore}</p>
         <p>{fortuneClassification}</p>
+        <ConfettiBlock />
       </div>
     );
   }
@@ -85,12 +87,7 @@ export default function Home() {
 
   return (
     <PageLayout>
-
-      <ConfettiBlock />
-
       <Scoreboard />
-
-      <ConfettiBlock />
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6 my-10">
         {uniqueFortunes.map((fortune, i) => (
