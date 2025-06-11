@@ -14,7 +14,7 @@ const Polaroid = ({ src, alt, label }: PolaroidProps)=> {
         alt={alt}
       />
 
-      <p className="mt-2">{label}</p>
+      <p className="mt-2 font-bold">{label}</p>
     </div>
   );
 }

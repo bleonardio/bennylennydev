@@ -1,16 +1,31 @@
 'use client';
 
-import { Card, Link, PageLayout } from "@/components";
+import { Card, Link, PageLayout, Polaroid } from "@/components";
+import Abba from '@/../public/assets/abba.jpg'
+import EspressoMartini from '@/../public/assets/espresso-martini.jpg'
+import Keukenhof from '@/../public/assets/keukenhof.jpg'
 
 function Page() {
   return (
     <PageLayout title="About">
 
-      {/*<div className="grid grid-cols-1 md:grid-cols-3 gap-6 pt-4 pb-8">*/}
-      {/*  <Polaroid label="test" src={Placeholder} alt="placeholder" />*/}
-      {/*  <Polaroid label="test" src={Placeholder} alt="placeholder" />*/}
-      {/*  <Polaroid label="test" src={Placeholder} alt="placeholder" />*/}
-      {/*</div>*/}
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 pt-4 pb-8">
+        <Polaroid
+          label="Keukenhof gardens, 2025"
+          src={Keukenhof}
+          alt="selfie in the keukenhof gardens, Netherlands"
+        />
+        <Polaroid
+          label="Espresso martini experimentation, 2025"
+          src={EspressoMartini}
+          alt="selfie with an espresso martinin cocktail"
+        />
+        <Polaroid
+          label="Summer visit home, 2024"
+          src={Abba}
+          alt="photo of me with my dog, Abba"
+        />
+      </div>
 
       <p className="mb-4">
         Hello! I’m Bennett and you’re probably wondering whats going on here - me too.
@@ -33,11 +48,11 @@ function Page() {
       </p>
 
       <div className="grid grid-cols-1 md:grid-cols-4 gap-6 pb-8">
+        <Card front="Pronouns" back="he / they" />
         <Card front="Studying" back="Herbalism, Palmistry, Mixology, Astrology"/>
         <Card front="Watching" back="White Lotus, Taskmaster"/>
         <Card front="Playing" back="Disney Dreamlight Valley"/>
         <Card front="Reading" back="How to Read a Tree by Tristan Gooley" />
-        <Card front="Listening to" back="Big Thief, Beach Boys, Wynton Marsallis, Miles Davis" />
         <Card front="Wearing" back="Slippers || Docs" />
         <Card front="Likes" back="The feeling of crawling into bed after a shower, discovering new music" />
         <Card front="Dislikes" back="People spitting in public places, European showers, heavy cologne / perfume" />

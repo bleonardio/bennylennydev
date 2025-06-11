@@ -6,7 +6,7 @@ import { LinkStyle } from "@/components/Link/Link";
 const Footer = () => {
   return (
     <footer className="p-4 text-center text-sm text-light bg-secondary">
-      <div className="flex items-center justify-between gap-6">
+      <div className="flex flex-col md:flex-row items-center justify-between gap-2 md:gap-6">
         <Link
           href="https://github.com/bleonardio/bennylennydev"
           classes="flex items-center"
@@ -17,7 +17,7 @@ const Footer = () => {
           <p>Source code</p>
         </Link>
 
-        <p className="text-center my-4">
+        <p className="text-center">
           © 2025 bennylenny.dev. All rights reserved.
         </p>
       </div>
