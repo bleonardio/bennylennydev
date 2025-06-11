@@ -37,7 +37,7 @@ const ResumeItem = ({
         style={PillStyle.Secondary}
       />
 
-      {subtitle && (<p className="italic my-2 ml-2">{subtitle}</p>)}
+      {subtitle && (<p className="my-2 ml-2">{subtitle}</p>)}
 
       {timeline && (<p className="italic my-2 ml-2">{timeline}</p>)}
 
@@ -76,7 +76,7 @@ function _interpolate(text: string, embeddedLink?: EmbeddedLink) {
 
   const interpolated = text.replace(
     embeddedLink.id,
-    `<a href="${embeddedLink.href}" target="_blank" class="cursor-pointer text-secondary hover:text-secondary-hover">${embeddedLink.text}</a>`
+    `<a href="${embeddedLink.href}" target="_blank" class="cursor-pointer text-secondary hover:text-secondary-hover font-bold">${embeddedLink.text}</a>`
   );
 
   return <p dangerouslySetInnerHTML={{ __html: interpolated }} />

@@ -12,23 +12,17 @@ function Page() {
               timeline="January 2020 - Present"
               listItems={[
                 'Promoted to Senior Software Engineer Spring 2025',
-                'Experience building high visibility customer-facing features in e-commerce and subscription domain (e.g. subscription management tools, product, cart and checkout pages) and internal tools (e.g. admin portal interfaces for internal use)',
-                'Experience working closely with product managers, designers, and business stakeholders to scope and deliver intuitive, resilient user experiences',
-                'Led front-end development for an in-house web video player to support digital course products',
-                'Led front end development for a new customer subscription management page, migrating complex legacy functionality to a new application while preserving key business logic and user flows',
-                'Regularly led on call rotations, gained experience promptly triaging user facing outages, root cause analysis and deploying hotfixes'
+                'Building and maintaining scalable account management, product discovery and checkout flows for a large, global customer base',
+                'Replaced third-party dependencies with scalable in-house solutions to improve long-term maintainability and platform stability',
+                'Modernized a legacy subscription page using Next.js, improving performance and UX while preserving complex business logic',
+                'Led the development of a web based digital course player interface',
+                'Led on-call rotations, triaged user-facing outages, performed root cause analysis, and deployed hotfixes to resolve issues quickly'
               ]}
             />
 
             <ResumeItem
-              title="HP Inc. — Data Science Intern"
-              timeline="Spring 2016 – Fall 2019"
-              listItems={['Data sourcing and tool development for tracking & reporting on product quality metrics']}
-            />
-
-            <ResumeItem
               title="NASA S.U.I.T.S. Challenge — Developer"
-              timeline="Spring 2018 – Fall 2019"
+              timeline="Summer 2018 - Fall 2019"
               listItems={[
                 'Collaborated with a team of students at Boise State to build an augmented reality (AR) informatics system for NASA astronauts on spacewalks',
                 'Built a web interface to support mission control communication with the AR system',
@@ -43,7 +37,7 @@ function Page() {
 
             <ResumeItem
               title="Mary Ellen Ryder Linguistics Lab — Intern"
-              timeline="Spring 2019 – Fall 2019"
+              timeline="Spring – Fall 2019"
               listItems={['Co-led full site overhaul for the {{boiseInterpretersLink}} website', 'Supported the launch of the Languages of Boise Project and assisted with lab maintenance']}
               embeddedLink={{
                 id: '{{boiseInterpretersLink}}',
@@ -56,8 +50,14 @@ function Page() {
               title="Department of English, Boise State University — Intern"
               timeline="Fall 2019"
               listItems={[
-                'Transcribed and analyzed video footage using critical discourse analysis notation for an ethnographic study on drag performance and identity'
+                'Transcribed and analyzed video footage using critical discourse analysis for an ethnographic study on drag performance'
               ]}
+            />
+
+            <ResumeItem
+              title="HP Inc. — Data Science Intern"
+              timeline="Spring 2016 – Fall 2019"
+              listItems={['Developed tools for tracking and reporting on product quality metrics\n']}
             />
 
           </Island>
@@ -67,22 +67,22 @@ function Page() {
           <Island title="Technical Skills">
 
             <ResumeItem
-              title="Daily Toolkit"
+              title="Core Stack"
               keyValueItems={[
                 {
                   key: 'Languages',
-                  value: 'React, HTML, CSS, TypeScript, JavaScript',
+                  value: 'React, HTML, CSS, SCSS, TypeScript, JavaScript',
                 },
                 {
                   key: 'Libraries & Frameworks',
-                  value: 'Next.js, Storybook, Shopify, Tailwind, Jest, Playwright, Launchdarkly, Contentful, New Relic',
+                  value: 'Next.js, Node.js, Tailwind CSS, Storybook, Jest, React Testing Library, Playwright, LaunchDarkly, Contentful, Shopify, Stripe, New Relic',
                 }
               ]}
             />
 
 
             <ResumeItem
-              title="Experienced With"
+              title="Additional Experience"
               keyValueItems={[
                 {
                   key: 'Languages',
@@ -90,7 +90,7 @@ function Page() {
                 },
                 {
                   key: 'Libraries & Frameworks',
-                  value: 'GraphQL, Kubernetes, Stripe, Google Analytics / Google Tag Manager, Rudderstack, Mux, Tableau',
+                  value: 'GraphQL, Kubernetes, Google Analytics / Tag Manager, Rudderstack, Mux, Tableau',
                 }
               ]}
             />
@@ -99,7 +99,7 @@ function Page() {
           <Island title="Education">
 
             <ResumeItem
-              title="B.S. in Computer Science, Minor in Linguistics"
+              title="B.S. Computer Science, Minor: Linguistics"
               subtitle="Boise State University — Boise, ID"
               timeline="Fall 2015 - Fall 2019"
             />
@@ -121,7 +121,7 @@ function Page() {
 
             <ResumeItem
               title="Linguistic Society of Boise State — President"
-              timeline="Spring 2019 - Fall 2019"
+              timeline="Spring - Fall 2019"
             />
 
             <ResumeItem
