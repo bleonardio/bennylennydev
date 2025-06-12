@@ -19,16 +19,8 @@ export default function Home() {
   }, []);
 
   function getFortuneClassification() {
-    if (overallScore <= -9) {
-      return "Perhaps it's time to cut your losses";
 
-    } else if (overallScore <= -6) {
-      return 'Ouch, better luck next time';
-
-    } else if (overallScore < 0) {
-      return 'Hang in there';
-
-    } else if (overallScore === 0) {
+    if (overallScore === 0) {
       return 'We love a clean slate';
 
     } else if (overallScore >= 33) {
@@ -67,7 +59,6 @@ export default function Home() {
         <ConfettiBlock />
         <p>Score: {overallScore}</p>
         <p>{fortuneClassification}</p>
-        <ConfettiBlock />
       </div>
     );
   }
@@ -77,11 +68,12 @@ export default function Home() {
       <>
         {isGameFinished && (
           <div className="grid grid-cols-3">
-            <ConfettiExplosion particleCount={200} />
-            <ConfettiExplosion particleCount={200} />
-            <ConfettiExplosion particleCount={200} />
+            <ConfettiExplosion />
+            <ConfettiExplosion />
+            <ConfettiExplosion />
           </div>
-        )}</>
+        )}
+      </>
     );
   }
 

@@ -31,17 +31,14 @@ function Page() {
         Hello! I’m Bennett and you’re probably wondering whats going on here - me too.
       </p>
       <p className="mb-4">
-        Let&apos;s start from the beginning: 13.8 billion years ag—
+        Let&apos;s start from the beginning: 13.8 billion years ag-
       </p>
       <p className="mb-4">
         Let&apos;s cut to the chase: I grew up in Idaho and spent most of my life in a classroom, with the band or on a
         soccer field. I followed some calls for adventure abroad, and am currently based in Amsterdam where I have lived
         for the past couple years.
       </p>
-      <p className="mb-4">
-        I&apos;ve had friends come and go, interests come and go, identities come and go and as the years go by, I am
-        gaining more confidence in my ability to “handle the seasons of my life” (Landslide, Fleetwood Mac).
-      </p>
+
       <p className="mb-4">
         I am working as a software engineer at <Link text="Lovevery" href="https://www.lovevery.com" isExternal={true}/> but when I&apos;m not working I can be found
         gardening, sleeping, sketching, climbing, making cocktails or doing nothing (underrated).
