@@ -7,8 +7,8 @@ const Footer = () => {
   const currentYear = new Date().getFullYear().toString();
 
   return (
-    <footer className="p-4 text-center text-sm text-light bg-secondary">
-      <div className="flex flex-col md:flex-row items-center justify-between gap-2 md:gap-6">
+    <footer className="p-4 text-center text-sm text-light bg-accent">
+      <div className="flex flex-col md:flex-row items-center justify-between gap-2 md:gap-6 mb-4 md:mb-0">
         <Link
           href="https://github.com/bleonardio/bennylennydev"
           classes="flex items-center"

@@ -11,7 +11,6 @@ export default function Home() {
 
   const [overallScore, setOverallScore] = useState<number>(0)
   const [cookiesCracked, setCookiesCracked] = useState<number>(0)
-  const [hasStarted, setHasStarted] = useState<boolean>(false);
 
   const uniqueFortunes = useMemo(() => {
     const shuffled = [...fortunes].sort(() => Math.random() - 0.5);
@@ -43,19 +42,13 @@ export default function Home() {
     }
   }
 
-  function onClick() {
-    if (!hasStarted) {
-      setHasStarted(true);
-    }
-  }
-
   const fortuneClassification = getFortuneClassification()
   const isGameFinished = cookiesCracked === cookiesAvailable;
 
   function Scoreboard() {
     return (
       // anchor sticky scoreboard below the site sticky header
-      <div className="bg-accent text-light p-4 mx-auto sticky top-[82px] z-10">
+      <div className="bg-accent p-4 text-light sticky top-[82px] z-10">
         <ConfettiBlock />
         <p>Score: {overallScore}</p>
         <p>{fortuneClassification}</p>
@@ -78,22 +71,23 @@ export default function Home() {
   }
 
   return (
-    <PageLayout>
+    <div data-testid="home-page">
       <Scoreboard />
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 my-10">
-        {uniqueFortunes.map((fortune, i) => (
-          <FortuneCookie
-            key={i}
-            fortune={fortune}
-            cb={(score) => {
-              setOverallScore(overallScore + score);
-              setCookiesCracked(cookiesCracked + 1);
-            }}
-            onClick={onClick}
-          />
-        ))}
-      </div>
-    </PageLayout>
+      <PageLayout>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 my-10">
+          {uniqueFortunes.map((fortune, i) => (
+            <FortuneCookie
+              key={i}
+              fortune={fortune}
+              cb={(score) => {
+                setOverallScore(overallScore + score);
+                setCookiesCracked(cookiesCracked + 1);
+              }}
+            />
+          ))}
+        </div>
+      </PageLayout>
+    </div>
   );
 }
