@@ -1,12 +1,12 @@
-'use client';
+"use client";
 
 import classNames from "classnames";
-import { useState } from 'react';
+import { useState } from "react";
 
 type CardProps = {
   front: string;
   back: string;
-}
+};
 
 const Card = ({ front, back }: CardProps) => {
   const [isFlipped, setIsFlipped] = useState(false);
@@ -22,9 +22,11 @@ const Card = ({ front, back }: CardProps) => {
       onClick={toggleFlip}
       className="cursor-pointer p-4 bg-accent hover:bg-accent-hover text-light rounded-md w-full text-center min-h-[140px] flex justify-center items-center transition-colors duration-300"
     >
-      <p className={classNames({
-        ['font-bold']: !isFlipped,
-      })}>
+      <p
+        className={classNames({
+          ["font-bold"]: !isFlipped,
+        })}
+      >
         {isFlipped ? back : front}
       </p>
     </div>

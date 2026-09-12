@@ -3,7 +3,7 @@ import React from "react";
 type IslandProps = {
   title: string;
   children: React.ReactNode;
-}
+};
 
 const Island = ({ title, children }: IslandProps) => {
   return (
@@ -15,6 +15,6 @@ const Island = ({ title, children }: IslandProps) => {
       {children}
     </div>
   );
-}
+};
 
 export default Island;

@@ -1,1 +1,1 @@
-export { default as Polaroid } from './Polaroid';
+export { default as Polaroid } from "./Polaroid";

@@ -1,41 +1,29 @@
-'use client';
+"use client";
 import classNames from "classnames";
 import Image from "next/image";
-import NextLink from 'next/link'
+import NextLink from "next/link";
 import { usePathname } from "next/navigation";
 
-import SiteLogo from '@/../public/site-logo.png'
+import SiteLogo from "@/../public/site-logo.png";
 import { Link } from "@/components/Link";
-import {LinkStyle } from "@/components/Link/Link";
-
+import { LinkStyle } from "@/components/Link/Link";
 
 const Header = () => {
   const pathname = usePathname();
 
   const navItems = [
-    { href: '/about', label: 'About ' },
-    { href: '/resume', label: 'Resume' },
-    { href: '/projects', label: 'Projects' },
+    { href: "/about", label: "About " },
+    { href: "/resume", label: "Resume" },
+    { href: "/projects", label: "Projects" },
   ];
 
-  const activeNavItemClasses = 'font-bold text-secondary-hover';
+  const activeNavItemClasses = "font-bold text-secondary-hover";
 
   return (
-    <header
-      className="flex justify-between items-center bg-primary-dark p-4 sticky top-0 z-50">
-      <NextLink
-        href="/"
-        title='bennylenny.dev'
-        className="flex items-center"
-      >
-        <Image
-          src={SiteLogo}
-          alt="bennylenny.dev"
-          height={50}
-          width={50}
-        />
-        <p
-          className="font-bold text-secondary hover:text-secondary-hover text-sm md:text-lg">
+    <header className="flex justify-between items-center bg-primary-dark p-4 sticky top-0 z-50">
+      <NextLink href="/" title="bennylenny.dev" className="flex items-center">
+        <Image src={SiteLogo} alt="bennylenny.dev" height={50} width={50} />
+        <p className="font-bold text-secondary hover:text-secondary-hover text-sm md:text-lg">
           ennylenny.dev
         </p>
       </NextLink>
@@ -47,14 +35,17 @@ const Header = () => {
             href={item.href}
             text={item.label}
             style={LinkStyle.Secondary}
-            classes={classNames({
-              [activeNavItemClasses]: pathname === item.href
-            }, 'md:text-lg text-sm')}
+            classes={classNames(
+              {
+                [activeNavItemClasses]: pathname === item.href,
+              },
+              "md:text-lg text-sm",
+            )}
           />
         ))}
       </div>
     </header>
   );
-}
+};
 
 export default Header;

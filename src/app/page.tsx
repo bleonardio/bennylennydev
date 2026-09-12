@@ -1,16 +1,16 @@
-'use client';
+"use client";
 
-import {useMemo, useState} from "react";
-import ConfettiExplosion from 'react-confetti-explosion';
+import { useMemo, useState } from "react";
+import ConfettiExplosion from "react-confetti-explosion";
 
-import {PageLayout, FortuneCookie } from "@/components";
+import { PageLayout, FortuneCookie } from "@/components";
 import { fortunes } from "@/components/FortuneCookie/fortunes";
 
 export default function Home() {
   const cookiesAvailable = 9;
 
-  const [overallScore, setOverallScore] = useState<number>(0)
-  const [cookiesCracked, setCookiesCracked] = useState<number>(0)
+  const [overallScore, setOverallScore] = useState<number>(0);
+  const [cookiesCracked, setCookiesCracked] = useState<number>(0);
 
   const uniqueFortunes = useMemo(() => {
     const shuffled = [...fortunes].sort(() => Math.random() - 0.5);
@@ -18,31 +18,24 @@ export default function Home() {
   }, []);
 
   function getFortuneClassification() {
-
     if (overallScore === 0) {
-      return 'We love a clean slate';
-
+      return "We love a clean slate";
     } else if (overallScore >= 33) {
-      return 'You absolute legend';
-
+      return "You absolute legend";
     } else if (overallScore >= 22) {
       return "We get it, you're good at this";
-
     } else if (overallScore >= 9) {
-      return 'Lets gooooo';
-
+      return "Lets gooooo";
     } else if (overallScore >= 6) {
-      return 'You are on a roll';
-
+      return "You are on a roll";
     } else if (overallScore >= 3) {
-      return 'You are somewhat favored';
-
+      return "You are somewhat favored";
     } else {
-      return 'A calm fortune... for now';
+      return "A calm fortune... for now";
     }
   }
 
-  const fortuneClassification = getFortuneClassification()
+  const fortuneClassification = getFortuneClassification();
   const isGameFinished = cookiesCracked === cookiesAvailable;
 
   function Scoreboard() {

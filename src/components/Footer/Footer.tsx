@@ -1,4 +1,4 @@
-import { Code, CodeXml } from 'lucide-react';
+import { Code, CodeXml } from "lucide-react";
 
 import { Link } from "@/components";
 import { LinkStyle } from "@/components/Link/Link";
@@ -22,7 +22,6 @@ const Footer = () => {
 
             <CodeXml size={24} />
           </div>
-
         </Link>
 
         <p className="text-center">
@@ -31,6 +30,6 @@ const Footer = () => {
       </div>
     </footer>
   );
-}
+};
 
 export default Footer;

@@ -6,7 +6,6 @@ export default function NotFoundPage() {
       <h2>That page does not exist :(</h2>
 
       <Link href="/" text="Let's get out of here" />
-
     </PageLayout>
   );
 }

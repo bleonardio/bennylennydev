@@ -1,1 +1,1 @@
-export { default as ResumeItem } from './ResumeItem';
+export { default as ResumeItem } from "./ResumeItem";

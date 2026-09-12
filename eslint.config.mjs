@@ -1,5 +1,6 @@
 import nextPlugin from "@next/eslint-plugin-next";
 import tsEslint from "typescript-eslint";
+import prettierConfig from "eslint-config-prettier";
 
 export default tsEslint.config(
   // 1. Injects recommended TypeScript parsing & rules natively
@@ -23,12 +24,8 @@ export default tsEslint.config(
   },
   {
     // 2. Clear global ignores block to protect workspace tracking
-    ignores: [
-      "node_modules/",
-      ".next/",
-      "out/",
-      "build/",
-      "next-env.d.ts"
-    ],
-  }
+    ignores: ["node_modules/", ".next/", "out/", "build/", "next-env.d.ts"],
+  },
+  // 3. Turns off rules that overlap with Prettier (must be last)
+  prettierConfig,
 );

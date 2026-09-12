@@ -1,4 +1,4 @@
-'use client';
+"use client";
 
 import classNames from "classnames";
 import { useState } from "react";
@@ -26,7 +26,7 @@ const FortuneCookie = ({ cb, onClick, fortune }: FortuneCookieProps) => {
 
   return (
     <div
-      className={classNames({['cursor-pointer']: !isOpened })}
+      className={classNames({ ["cursor-pointer"]: !isOpened })}
       onClick={handleClick}
     >
       {isOpened ? (
