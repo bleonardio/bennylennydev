@@ -14,7 +14,7 @@ export const wandering: TPoem = {
     {
       id: "2",
       lines: [
-        "I’m wearing dirty socks and have one pair of clean underwear left",
+        "I’m wearing dirty socks",
         "because I tried to pack light",
       ],
     },
@@ -22,8 +22,6 @@ export const wandering: TPoem = {
       id: "3",
       lines: [
         "I’m seeing an old friend tomorrow",
-        "I’m low on cash",
-        "I’m seeing a complicated friend tomorrow",
         "but today I’m wondering",
       ],
     },
@@ -132,7 +130,7 @@ export const wandering: TPoem = {
       id: "18",
       lines: [
         "I want to be …",
-        "hmm thats a tough one",
+        "hmm that's a tough one",
       ],
     },
   ],

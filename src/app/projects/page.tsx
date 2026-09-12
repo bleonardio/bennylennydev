@@ -1,5 +1,5 @@
 import { CinemaScreen, PageLayout, Poem, Polaroid } from "@/components";
-import { belatedBoyhood, borrowed, fragments, roots, wandering } from "@/components/Poem/data";
+import { belatedBoyhood, fragments, wandering } from "@/components/Poem/data";
 import HimareLeftCoastline from '@/../public/art/himare-left-coastline.jpg'
 import HimareRightCoastline from '@/../public/art/himare-right-coastline.jpg'
 import PurpleFlowerPastel from '@/../public/art/purple-flower-pastel.jpg'
@@ -54,13 +54,11 @@ function Page() {
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         <div className="flex flex-col gap-6">
-          <Poem poem={belatedBoyhood} />
-          <Poem poem={fragments} />
-          <Poem poem={roots} />
+          <Poem poem={wandering} />
         </div>
         <div className="flex flex-col gap-6">
-          <Poem poem={wandering} />
-          <Poem poem={borrowed} />
+          <Poem poem={belatedBoyhood} />
+          <Poem poem={fragments} />
         </div>
       </div>
 

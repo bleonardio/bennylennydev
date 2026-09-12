@@ -59,8 +59,7 @@ export const fragments: TPoem = {
     {
       id: "8",
       lines: [
-        "we can’t run from our messes",
-        "and we can’t clean up what we can’t see",
+        "Ouch",
       ],
     },
   ],
