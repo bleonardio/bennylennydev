@@ -12,7 +12,7 @@ type PillProps = {
 
 const Pill = ({ text, style = PillStyle.Primary, classes }: PillProps) => {
   const pillStyles = {
-    [PillStyle.Primary]: "bg-primary text-white",
+    [PillStyle.Primary]: "bg-primary text-light",
     [PillStyle.Secondary]: "bg-secondary text-white",
     [PillStyle.Accent]: "bg-secondary text-white",
   };

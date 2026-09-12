@@ -41,7 +41,7 @@ export default function Home() {
   function Scoreboard() {
     return (
       // anchor sticky scoreboard below the site sticky header
-      <div className="bg-accent p-4 text-light sticky top-[82px] z-10">
+      <div className="bg-secondary p-4 text-light sticky top-[82px] z-10">
         <ConfettiBlock />
         <p>Score: {overallScore}</p>
         <p>{fortuneClassification}</p>

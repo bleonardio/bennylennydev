@@ -4,7 +4,7 @@ type CinemaScreenProps = {
 
 const CinemaScreen = ({ src }: CinemaScreenProps) => {
   return (
-    <div className="relative bg-background p-4">
+    <div className="relative p-4">
       {/* Top Curtain */}
       <div className="absolute top-0 left-0 w-full h-12 bg-red-900 rounded-b-3xl shadow-md z-10" />
 
