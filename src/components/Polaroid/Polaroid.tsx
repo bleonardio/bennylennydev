@@ -12,6 +12,7 @@ const Polaroid = ({ src, alt, label }: PolaroidProps)=> {
       <Image
         src={src}
         alt={alt}
+        className="object-cover w-fit max-h-[340px]"
       />
 
       <p className="mt-2 font-bold">{label}</p>

@@ -17,8 +17,10 @@ const Card = ({ front, back }: CardProps) => {
 
   return (
     <div
+      onMouseEnter={toggleFlip}
+      onMouseLeave={toggleFlip}
       onClick={toggleFlip}
-      className="cursor-pointer p-4 bg-accent text-light rounded-md w-full text-center min-h-[140px] flex justify-center items-center"
+      className="cursor-pointer p-4 bg-accent hover:bg-accent-hover text-light rounded-md w-full text-center min-h-[140px] flex justify-center items-center transition-colors duration-300"
     >
       <p className={classNames({
         ['font-bold']: !isFlipped,
