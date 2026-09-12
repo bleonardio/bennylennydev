@@ -23,7 +23,7 @@ function Page() {
 
       <p className="mb-4">
         I am working as a software engineer at <Link text="Lovevery" href="https://www.lovevery.com" isExternal={true}/> but when I&apos;m not working I can be found
-        gardening, sketching, tinkering, making cocktails or looking for sunglasses I have misplaced.
+        gardening, sketching, scavenging secondhand CDs, making cocktails or looking for sunglasses I have misplaced.
       </p>
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6 pt-4 pb-8">
@@ -47,12 +47,12 @@ function Page() {
       <div className="grid grid-cols-1 md:grid-cols-4 gap-6 pb-8">
         <Card front="Pronouns" back="he / they" />
         <Card front="Studying" back="Herbalism, Palmistry, Mixology, Astrology"/>
-        <Card front="Watching" back="White Lotus, Taskmaster"/>
-        <Card front="Playing" back="Disney Dreamlight Valley"/>
-        <Card front="Reading" back="How to Read a Tree by Tristan Gooley" />
-        <Card front="Wearing" back="Slippers || Docs" />
+        <Card front="Watching" back="Ted Lasso, Taskmaster"/>
+        <Card front="Playing" back="Old School Runescape"/>
+        <Card front="Reading" back="The Only Light Left Burning by Erik J. Brown" />
+        <Card front="Listening to" back="Lou Reed, Big Thief, The Chixie Dix" />
         <Card front="Likes" back="The feeling of crawling into bed after a shower, discovering new music" />
-        <Card front="Dislikes" back="People spitting in public places, European showers, heavy cologne / perfume" />
+        <Card front="Dislikes" back="People spitting in public places, strong cologne / perfume" />
       </div>
 
     </PageLayout>
