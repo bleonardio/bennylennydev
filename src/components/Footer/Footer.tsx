@@ -1,4 +1,4 @@
-import { Code } from 'lucide-react';
+import { Code, CodeXml } from 'lucide-react';
 
 import { Link } from "@/components";
 import { LinkStyle } from "@/components/Link/Link";
@@ -15,8 +15,14 @@ const Footer = () => {
           style={LinkStyle.Light}
           isExternal
         >
-          <Code size={24} />
-          <p>Source code</p>
+          <div className="flex gap-2">
+            <Code size={24} />
+
+            <p>Source code</p>
+
+            <CodeXml size={24} />
+          </div>
+
         </Link>
 
         <p className="text-center">
