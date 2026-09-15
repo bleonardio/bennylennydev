@@ -29,10 +29,7 @@ export const fragments: TPoem = {
     },
     {
       id: "4",
-      lines: [
-        "screaming on arrival",
-        "every last one of us",
-      ],
+      lines: ["screaming on arrival", "every last one of us"],
     },
     {
       id: "5",
@@ -51,17 +48,11 @@ export const fragments: TPoem = {
     },
     {
       id: "7",
-      lines: [
-        "but I missed a piece",
-        "and it found its way into my foot",
-      ],
+      lines: ["but I missed a piece", "and it found its way into my foot"],
     },
     {
       id: "8",
-      lines: [
-        "we can’t run from our messes",
-        "and we can’t clean up what we can’t see",
-      ],
+      lines: ["Ouch"],
     },
   ],
 };

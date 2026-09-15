@@ -1,16 +1,31 @@
-import { dirname } from "path";
-import { fileURLToPath } from "url";
-import { FlatCompat } from "@eslint/eslintrc";
+import nextPlugin from "@next/eslint-plugin-next";
+import tsEslint from "typescript-eslint";
+import prettierConfig from "eslint-config-prettier";
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = dirname(__filename);
-
-const compat = new FlatCompat({
-  baseDirectory: __dirname,
-});
-
-const eslintConfig = [
-  ...compat.extends("next/core-web-vitals", "next/typescript"),
-];
-
-export default eslintConfig;
+export default tsEslint.config(
+  // 1. Injects recommended TypeScript parsing & rules natively
+  ...tsEslint.configs.recommended,
+  {
+    files: ["**/*.{js,jsx,ts,tsx,mjs,cjs}"],
+    plugins: {
+      "@next/next": nextPlugin,
+    },
+    languageOptions: {
+      parserOptions: {
+        ecmaFeatures: {
+          jsx: true, // Allows ESLint to see React JSX tags (<)
+        },
+      },
+    },
+    rules: {
+      ...nextPlugin.configs.recommended.rules,
+      ...nextPlugin.configs["core-web-vitals"].rules,
+    },
+  },
+  {
+    // 2. Clear global ignores block to protect workspace tracking
+    ignores: ["node_modules/", ".next/", "out/", "build/", "next-env.d.ts"],
+  },
+  // 3. Turns off rules that overlap with Prettier (must be last)
+  prettierConfig,
+);

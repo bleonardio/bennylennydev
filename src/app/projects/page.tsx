@@ -1,11 +1,11 @@
 import { CinemaScreen, PageLayout, Poem, Polaroid } from "@/components";
-import { belatedBoyhood, borrowed, fragments, roots, wandering } from "@/components/Poem/data";
-import HimareLeftCoastline from '@/../public/art/himare-left-coastline.jpg'
-import HimareRightCoastline from '@/../public/art/himare-right-coastline.jpg'
-import PurpleFlowerPastel from '@/../public/art/purple-flower-pastel.jpg'
-import Orchid from '@/../public/art/orchid-mixed-media.jpg'
-import SakuraSushiBar from '@/../public/art/sushi-bar-pencil.jpg'
-import MountainPass from '@/../public/art/mountain-pass-pastel.jpg'
+import { belatedBoyhood, fragments, wandering } from "@/components/Poem/data";
+import HimareLeftCoastline from "@/../public/art/himare-left-coastline.jpg";
+import HimareRightCoastline from "@/../public/art/himare-right-coastline.jpg";
+import PurpleFlowerPastel from "@/../public/art/purple-flower-pastel.jpg";
+import Orchid from "@/../public/art/orchid-mixed-media.jpg";
+import SakuraSushiBar from "@/../public/art/sushi-bar-pencil.jpg";
+import MountainPass from "@/../public/art/mountain-pass-pastel.jpg";
 
 function Page() {
   return (
@@ -54,13 +54,11 @@ function Page() {
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         <div className="flex flex-col gap-6">
-          <Poem poem={belatedBoyhood} />
-          <Poem poem={fragments} />
-          <Poem poem={roots} />
+          <Poem poem={wandering} />
         </div>
         <div className="flex flex-col gap-6">
-          <Poem poem={wandering} />
-          <Poem poem={borrowed} />
+          <Poem poem={belatedBoyhood} />
+          <Poem poem={fragments} />
         </div>
       </div>
 
@@ -68,7 +66,8 @@ function Page() {
 
       <h2 className="text-xl font-bold mb-4 my-4">Caroling</h2>
       <p className="mb-2">
-        A holiday tradition among some friends to gather in person or from afar to sing some carols.
+        A holiday tradition among some friends to gather in person or from afar
+        to sing some carols.
       </p>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4 pb-6">
@@ -76,12 +75,11 @@ function Page() {
         <CinemaScreen src="https://www.youtube.com/embed/rCVE0-4LGB8?si=bYwyHrKNRj3dmQyZ" />
       </div>
 
-      <h2 className="text-xl font-bold my-4">
-        i48 Film Festival
-      </h2>
+      <h2 className="text-xl font-bold my-4">i48 Film Festival</h2>
 
       <p className="mb-2">
-        Highlights from participation in an annual challenge to create a short film from scratch in 48 hours.
+        Highlights from participation in an annual challenge to create a short
+        film from scratch in 48 hours.
       </p>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4 pb-6">
@@ -89,19 +87,17 @@ function Page() {
         <CinemaScreen src="https://www.youtube.com/embed/cMz4P2z9npE?si=l6eNio7EUWSBAh4G" />
       </div>
 
-      <h2 className="text-xl font-bold my-4">
-        NASA SUITS Highlights
-      </h2>
+      <h2 className="text-xl font-bold my-4">NASA SUITS Highlights</h2>
 
       <p className="mb-2">
-        Information and visual aids of the system known as A.R.S.I.S. (Augmented Reality Space Informatics System).
+        Information and visual aids of the system known as A.R.S.I.S. (Augmented
+        Reality Space Informatics System).
       </p>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4 pb-6">
         <CinemaScreen src="https://www.youtube.com/embed/uBQcOnx4BX0?si=np_agmY7HTCzaGM6" />
         <CinemaScreen src="https://www.youtube.com/embed/2SpvelKB3VM?si=EKfe85y_wcovBZjb" />
       </div>
-
     </PageLayout>
   );
 }

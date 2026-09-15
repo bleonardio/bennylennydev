@@ -1,11 +1,11 @@
 import React from "react";
 import classNames from "classnames";
-import Link from 'next/link'
+import Link from "next/link";
 
 export enum LinkStyle {
-  Primary = 'primary',
-  Secondary = 'secondary',
-  Light = 'light',
+  Primary = "primary",
+  Secondary = "secondary",
+  Light = "light",
 }
 
 type LinkProps = {
@@ -16,7 +16,7 @@ type LinkProps = {
   classes?: string;
   children?: React.ReactNode;
   style?: LinkStyle;
-}
+};
 
 const AppLink = ({
   text,
@@ -27,15 +27,15 @@ const AppLink = ({
   children,
   style = LinkStyle.Primary,
 }: LinkProps) => {
-  const sharedStyles = 'cursor-pointer font-bold'
+  const sharedStyles = "cursor-pointer font-bold";
 
   const styleMap = {
-    [LinkStyle.Primary]: 'text-primary hover:text-primary-hover',
-    [LinkStyle.Secondary]: 'text-secondary hover:text-secondary-hover',
-    [LinkStyle.Light]: 'text-light hover:text-light-hover',
-  }
+    [LinkStyle.Primary]: "text-primary hover:text-primary-hover",
+    [LinkStyle.Secondary]: "text-secondary hover:text-secondary-hover",
+    [LinkStyle.Light]: "text-light hover:text-light-hover",
+  };
 
-  const linkClasses= classNames(sharedStyles, styleMap[style], classes);
+  const linkClasses = classNames(sharedStyles, styleMap[style], classes);
   const linkBody = text || children;
 
   if (isExternal) {
@@ -53,14 +53,10 @@ const AppLink = ({
   }
 
   return (
-    <Link
-      href={href}
-      className={linkClasses}
-      onClick={onClick}
-    >
+    <Link href={href} className={linkClasses} onClick={onClick}>
       {linkBody}
     </Link>
   );
-}
+};
 
 export default AppLink;

@@ -1,12 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Lora:wght@400;700&display=swap");
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 :root {
-  --background: #FFE7B8;
-  --foreground: #3B2C35;
+  --background: #f4c871;
+  --foreground: #3b2c35;
 }
 
 @theme inline {

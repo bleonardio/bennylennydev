@@ -1,12 +1,12 @@
-'use client';
+"use client";
 
 import classNames from "classnames";
-import { useState } from 'react';
+import { useState } from "react";
 
 type CardProps = {
   front: string;
   back: string;
-}
+};
 
 const Card = ({ front, back }: CardProps) => {
   const [isFlipped, setIsFlipped] = useState(false);
@@ -17,12 +17,16 @@ const Card = ({ front, back }: CardProps) => {
 
   return (
     <div
+      onMouseEnter={toggleFlip}
+      onMouseLeave={toggleFlip}
       onClick={toggleFlip}
-      className="cursor-pointer p-4 bg-accent text-light rounded-md w-full text-center min-h-[140px] flex justify-center items-center"
+      className="cursor-pointer p-4 bg-secondary text-light rounded-md w-full text-center min-h-[140px] flex justify-center items-center transition-colors duration-300"
     >
-      <p className={classNames({
-        ['font-bold']: !isFlipped,
-      })}>
+      <p
+        className={classNames({
+          ["font-bold"]: !isFlipped,
+        })}
+      >
         {isFlipped ? back : front}
       </p>
     </div>

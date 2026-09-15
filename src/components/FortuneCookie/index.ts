@@ -1,1 +1,1 @@
-export { default as FortuneCookie } from './FortuneCookie'
+export { default as FortuneCookie } from "./FortuneCookie";
